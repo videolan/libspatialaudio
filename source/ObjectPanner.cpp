@@ -1,7 +1,7 @@
 /*############################################################################*/
 /*#                                                                          #*/
 /*#  Pan mono objects on a speaker layout in real-time.                      #*/
-/*#  Copyright © 2025 Peter Stitt                                            #*/
+/*#  Copyright Â© 2025 Peter Stitt                                            #*/
 /*#                                                                          #*/
 /*#  Filename:      ObjectPanner.cpp                                         #*/
 /*#  Version:       0.1                                                      #*/
