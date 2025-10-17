@@ -58,6 +58,9 @@ namespace spaudio {
         void Process(BFormat* pBFSrcDst);
         void Process(BFormat* pBFSrcDst, unsigned int nSamples);
 
+    private:
+        using AmbisonicBase::Configure;
+
     protected:
         kiss_fftr_cfg m_pFFT_psych_cfg;
         kiss_fftr_cfg m_pIFFT_psych_cfg;
