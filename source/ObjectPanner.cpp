@@ -82,8 +82,8 @@ namespace spaudio {
             return;
         }
 
-        int iCount = 0;
-        for (int i = 0; i < m_layout.getNumChannels(); ++i)
+        size_t iCount = 0;
+        for (size_t i = 0; i < m_layout.getNumChannels(); ++i)
             if (!m_layout.getChannel(i).getIsLfe())
                 outGains[i] = inGains[iCount++];
             else
