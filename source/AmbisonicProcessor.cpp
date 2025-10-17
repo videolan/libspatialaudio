@@ -31,7 +31,7 @@ namespace spaudio {
             delete[] m_pfTempSample;
     }
 
-    bool AmbisonicProcessor::Configure(unsigned nOrder, bool b3D, unsigned /*nBlockSize*/, unsigned nMisc)
+    bool AmbisonicProcessor::Configure(unsigned nOrder, bool b3D, unsigned nMisc)
     {
         bool success = AmbisonicBase::Configure(nOrder, b3D, nMisc);
         if (!success)
@@ -42,6 +42,11 @@ namespace spaudio {
         memset(m_pfTempSample, 0, m_nChannelCount * sizeof(float));
 
         return true;
+    }
+
+    bool AmbisonicProcessor::Configure(unsigned nOrder, bool b3D, unsigned /*nBlockSize*/, unsigned nMisc)
+    {
+        return Configure(nOrder, b3D, nMisc);
     }
 
     void AmbisonicProcessor::Reset()

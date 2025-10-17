@@ -135,12 +135,13 @@ namespace spaudio {
          * @return              Returns true if the configuration is successful.
          */
         bool Configure(unsigned nOrder, bool b3D, unsigned nBlockSize, unsigned nMisc);
+        bool Configure(unsigned nOrder, bool b3D, unsigned nMisc) override;
 
         /** Not implemented. */
-        void Reset();
+        void Reset() override;
 
         /** Recalculate coefficients after the orientation changed. */
-        void Refresh();
+        void Refresh() override;
 
         /** Set yaw, roll, and pitch settings.
          * @param orientation   Orientation as yaw, pitch and roll
