@@ -40,11 +40,20 @@ namespace spaudio {
          */
         void Process(float** pBFSrc, float** ppfDst);
 
+    private:
+        bool Configure(unsigned /* nOrder */,
+            bool /* b3D */,
+            unsigned /* nSampleRate */,
+            unsigned /* nBlockSize */,
+            unsigned& /* tailLength */,
+            std::string /* HRTFPath */,
+            bool /* lowCpuMode */) override { return false; };
+
     protected:
         unsigned m_nSpeakers;
 
         /** Allocate the buffers required for the convolution processing. */
-        virtual void AllocateBuffers();
+        virtual void AllocateBuffers() override;
     };
 
 } // namespace spaudio
