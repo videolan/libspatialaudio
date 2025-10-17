@@ -69,6 +69,8 @@ namespace spaudio {
         bool GetUseOptimFilters();
 
     private:
+        using AmbisonicBase::Configure;
+
         AmbisonicOptimFilters m_shelfFilters;
         // A temp version of the input signal
         BFormat m_pBFSrcTmp;
