@@ -2,7 +2,7 @@
 /*#                                                                          #*/
 /*#  Convex hulls of the loudspeaker layouts used in the point source panner #*/
 /*#                                                                          #*/
-/*#  Copyright © 2025 Peter Stitt                                            #*/
+/*#  Copyright Â© 2025 Peter Stitt                                            #*/
 /*#                                                                          #*/
 /*#  Filename:      LoudspeakerLayoutHulls.h                                 #*/
 /*#  Version:       0.1                                                      #*/
