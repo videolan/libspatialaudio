@@ -45,7 +45,6 @@ namespace spaudio {
     {
     public:
         Orientation(float fYaw, float fPitch, float fRoll)
-            : fYaw(fYaw), fPitch(fPitch), fRoll(fRoll)
         {
             float fCosYaw = cosf(fYaw);
             float fSinYaw = sinf(fYaw);
@@ -90,13 +89,6 @@ namespace spaudio {
         friend class AmbisonicProcessor;
 
     private:
-        /** rotation around the Z axis (yaw) */
-        float fYaw;
-        /** rotation around the Y axis (pitch) */
-        float fPitch;
-        /** rotation around the X axis (roll) */
-        float fRoll;
-
         /** These angles are obtained from Yaw, Pitch and Roll (ZYX convention)**/
         /** They follow the ZYZ convention to match the rotation equations **/
         /** rotation around the Z axis */
