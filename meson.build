@@ -44,3 +44,5 @@ pkg_mod.generate(
     description : 'Spatial audio rendering library',
     subdirs : 'spatialaudio',
 )
+
+subdir('tests')
