@@ -219,13 +219,13 @@ namespace spaudio {
         return channels;
     }
 
-    const Channel& Layout::getChannel(int iCh) const
+    const Channel& Layout::getChannel(size_t iCh) const
     {
         assert(iCh < channels.size());
         return channels[iCh];
     }
 
-    Channel& Layout::getChannel(int iCh)
+    Channel& Layout::getChannel(size_t iCh)
     {
         assert(iCh < channels.size());
         return channels[iCh];

@@ -264,8 +264,8 @@ namespace spaudio {
          * @param iCh Index of the channel.
          * @return A reference to the channel.
          */
-        const Channel& getChannel(int iCh) const;
-        Channel& getChannel(int iCh);
+        const Channel& getChannel(size_t iCh) const;
+        Channel& getChannel(size_t iCh);
 
         /** Returns the number of channels in the layout. */
         size_t getNumChannels() const;
