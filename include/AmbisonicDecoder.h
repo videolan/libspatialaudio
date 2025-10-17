@@ -145,6 +145,8 @@ namespace spaudio {
          */
         bool GetPresetLoaded();
 
+    private:
+        using AmbisonicBase::Configure;
     protected:
         void SpeakerSetUp(Amblib_SpeakerSetUps nSpeakerSetUp, unsigned nSpeakers = 1);
 
