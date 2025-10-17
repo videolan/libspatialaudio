@@ -37,7 +37,7 @@ namespace spaudio {
                 polarPosition = bs2094::positions[index];
                 polarPositionNominal = bs2094::positions[index];
             }
-            else // 
+            else //
             {
 
             }
