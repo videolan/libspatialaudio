@@ -73,7 +73,7 @@ unsigned int mit_hrtf_get(int* pAzimuth, int* pElevation, unsigned int samplerat
 
 
 #ifdef __cplusplus
-} 
+}
 #endif
 
 #endif // _MIT_HRTF_LIB_H_

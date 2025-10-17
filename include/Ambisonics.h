@@ -34,4 +34,3 @@
 #include "AmbisonicAllRAD.h"
 
 #endif //_AMBISONICS_H
-

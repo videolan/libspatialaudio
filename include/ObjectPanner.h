@@ -35,7 +35,7 @@ namespace spaudio {
          * @param layout            The output loudspeaker layout.
          * @param sampleRate        Sample rate of the signal to be processed.
          * @param fadeTimeMilliSec  Fade time in milliseconds when the position changes.
-         * @return 
+         * @return
          */
         bool Configure(OutputLayout layout, unsigned sampleRate, float fadeTimeMilliSec);
 
@@ -75,7 +75,7 @@ namespace spaudio {
         std::vector<double> m_gainsTmp;
         // The current panning gains with zero padding for the LFE channel(s)
         std::vector<double> m_gains;
-        
+
         // Output loudspeaker layout
         Layout m_layout;
 

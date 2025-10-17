@@ -5206,4 +5206,3 @@ static constexpr float points[5200][2] = {{1.579237f, 0.540299f},
 
     static constexpr unsigned int nTdesignPoints = 5200;
 };
-
