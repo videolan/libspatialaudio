@@ -62,7 +62,7 @@ namespace spaudio {
             bool lowCpuMode = true);
 
         /** Resets the state of the binauralizer. */
-        virtual void Reset();
+        virtual void Reset() override;
 
         /** Base class pure virtual function. Not implemented here. */
         virtual void Refresh() override;
