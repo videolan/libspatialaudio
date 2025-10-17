@@ -12,9 +12,6 @@
 /*#                                                                          #*/
 /*############################################################################*/
 
-
-#pragma once
-
 #include "LoudspeakerLayouts.h"
 
 namespace spaudio {
