@@ -219,7 +219,7 @@ namespace spaudio {
 
             gains[0] = 0.;
             gains[1] = 0.;
-            // See Rec. ITU-R BS.2127-0 6.1.2.4 (page 2.5) for downmix method 
+            // See Rec. ITU-R BS.2127-0 6.1.2.4 (page 2.5) for downmix method
             double stereoDownmix[2][5] = { {1.,0.,1. / sqrt(3.),1. / sqrt(2.),0.}, {0.,1.,1. / sqrt(3.),0.,1. / sqrt(2.)} };
             for (int i = 0; i < 2; ++i)
                 for (int j = 0; j < 5; ++j)
@@ -248,7 +248,7 @@ namespace spaudio {
             // See IAMF v1.0.0 sec. 7.6.2 for downmix matrix
             double p = std::sqrt(0.5);
             double gainNormalisation = 2. / (1. + 2. * p);
-            double downmixMatrix[5][11] = { 0. };
+            double downmixMatrix[5][11] = { { 0. } };
             downmixMatrix[0][0] = 1.;
             downmixMatrix[0][3] = p;
             downmixMatrix[0][5] = p;
