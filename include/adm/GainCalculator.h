@@ -98,7 +98,7 @@ namespace spaudio {
             void handle(const std::vector<ExclusionZone>& exclusionZones, std::vector<double>& gainsInOut);
 
         private:
-            unsigned int m_nCh = 0;
+            size_t m_nCh = 0;
             Layout m_layout;
             std::vector<std::vector<std::set<unsigned int>>> m_downmixMapping;
             std::vector<std::vector<unsigned int>> m_downmixMatrix;
@@ -119,7 +119,7 @@ namespace spaudio {
              * @param exlcuded	Vector indicating if a loudspeaker has been excluded.
              * @return			Total number of excluded loudspeakers.
              */
-            int getNumExcluded(const std::vector<bool>& exlcuded);
+            size_t getNumExcluded(const std::vector<bool>& exlcuded);
 
             /** Get the layer priority based on the input and output channel types.
              * @param inputChannelName	Name of the input channel.
@@ -135,8 +135,8 @@ namespace spaudio {
             // Temp vector of the gains
             std::vector<double> m_gainsTmp;
 
-            std::vector<unsigned int> m_notExcludedElements;
-            std::vector<unsigned int> m_setElements;
+            std::vector<size_t> m_notExcludedElements;
+            std::vector<size_t> m_setElements;
 
         };
 

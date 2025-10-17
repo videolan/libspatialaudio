@@ -150,7 +150,7 @@ namespace spaudio {
         ZoneExclusionHandler::ZoneExclusionHandler(const Layout& layout)
         {
             m_layout = Layout::getLayoutWithoutLFE(layout);
-            m_nCh = (unsigned int)m_layout.getNumChannels();
+            m_nCh = m_layout.getNumChannels();
 
             // Get the cartesian coordinates of all nominal positions
             for (unsigned int iSpk = 0; iSpk < m_nCh; ++iSpk)
@@ -248,7 +248,7 @@ namespace spaudio {
             // Remove rows reduced to a single speaker.
             for (size_t iRow = 0; iRow < m_rowInds.size(); ++iRow)
             {
-                int exclCount = 0;
+                size_t exclCount = 0;
                 for (auto& i : m_rowInds[iRow])
                     if (excluded[i])
                         exclCount++;
@@ -311,9 +311,9 @@ namespace spaudio {
             }
         }
 
-        int ZoneExclusionHandler::getNumExcluded(const std::vector<bool>& exlcuded)
+        size_t ZoneExclusionHandler::getNumExcluded(const std::vector<bool>& exlcuded)
         {
-            int nExcluded = 0;
+            size_t nExcluded = 0;
             for (size_t i = 0; i < exlcuded.size(); ++i)
                 if (exlcuded[i])
                     nExcluded++;
@@ -339,18 +339,18 @@ namespace spaudio {
             auto nExcluded = getNumExcluded(m_isExcluded);
 
             // Clear the downmix matrix
-            for (int i = 0; i < (int)m_nCh; ++i)
-                for (int j = 0; j < (int)m_nCh; ++j)
+            for (size_t i = 0; i < m_nCh; ++i)
+                for (size_t j = 0; j < m_nCh; ++j)
                     m_D[i][j] = 0.;
 
-            if (nExcluded == (int)m_nCh || nExcluded == 0)
+            if (nExcluded == m_nCh || nExcluded == 0)
             {
                 return; // No change to the gain vector
             }
             else
             {
                 // Go through all the speakers and find the first set that contains non-exlcuded speakers
-                for (int iSpk = 0; iSpk < (int)m_nCh; ++iSpk)
+                for (size_t iSpk = 0; iSpk < m_nCh; ++iSpk)
                 {
                     // Find the first set with non-excluded speakers
                     for (size_t iSet = 0; iSet < m_downmixMapping[iSpk].size(); ++iSet)
@@ -374,12 +374,12 @@ namespace spaudio {
                     }
                 }
                 // Calculate the downmixed output gain vector
-                for (int i = 0; i < (int)m_nCh; ++i)
+                for (size_t i = 0; i < m_nCh; ++i)
                     m_gainsTmp[i] = gainInOut[i];
-                for (int i = 0; i < (int)m_nCh; ++i)
+                for (size_t i = 0; i < m_nCh; ++i)
                 {
                     double g_tmp = 0.;
-                    for (unsigned int j = 0; j < m_nCh; ++j)
+                    for (size_t j = 0; j < m_nCh; ++j)
                         g_tmp += m_D[i][j] * m_gainsTmp[j] * m_gainsTmp[j];
                     gainInOut[i] = sqrt(g_tmp);
                 }
@@ -594,8 +594,8 @@ namespace spaudio {
                 return;
             }
 
-            int iCount = 0;
-            for (int i = 0; i < layout.getNumChannels(); ++i)
+            size_t iCount = 0;
+            for (size_t i = 0; i < layout.getNumChannels(); ++i)
                 if (!layout.getChannel(i).getIsLfe())
                     gainsWithLFE[i] = gainsNoLFE[iCount++];
                 else
