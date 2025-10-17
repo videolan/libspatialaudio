@@ -28,11 +28,11 @@ namespace spaudio {
     Channel::Channel(ChannelTypes channelType)
     {
         int index = static_cast<int>(channelType);
-        if (index > -1 && index < bs2094::channelLabels.size())
+        if (index > -1 && static_cast<size_t>(index) < bs2094::channelLabels.size())
         {
             name = bs2094::channelLabels[index];
             this->channelType = channelType;
-            if (index < bs2094::positions.size())
+            if (static_cast<size_t>(index) < bs2094::positions.size())
             {
                 polarPosition = bs2094::positions[index];
                 polarPositionNominal = bs2094::positions[index];
