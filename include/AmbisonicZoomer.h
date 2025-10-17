@@ -69,6 +69,8 @@ namespace spaudio {
          */
         void Process(BFormat* pBFSrcDst, unsigned nSamples);
 
+    private:
+        using AmbisonicBase::Configure;
     protected:
         AmbisonicDecoder m_AmbDecoderFront;
 
