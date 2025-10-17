@@ -94,6 +94,7 @@ namespace spaudio {
         void Process(BFormat* pBFSrcDst, unsigned nSamples);
 
     private:
+        using AmbisonicBase::Configure;
         RotationOrder m_rotOrder = RotationOrder::YawPitchRoll;
         RotationOrientation m_orientation;
         BFormat m_tempBuffer;
