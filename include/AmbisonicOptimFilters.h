@@ -64,6 +64,9 @@ namespace spaudio {
          */
         void Process(BFormat* pBFSrcDst, unsigned int nSamples);
 
+    private:
+        using AmbisonicBase::Configure;
+
     protected:
         // Filter the signal into low- and high-frequency bands
         LinkwitzRileyIIR m_bandFilterIIR;
