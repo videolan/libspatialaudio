@@ -135,9 +135,9 @@ namespace spaudio {
         m_channelToObjMap.clear();
 
         // Set up required processors based on channelInfo
-        int iObj = 0;
-        int iDirSpk = 0;
-        int iHOA = 0;
+        unsigned iObj = 0;
+        unsigned iDirSpk = 0;
+        unsigned iHOA = 0;
         for (unsigned int iCh = 0; iCh < channelInfo.nChannels; ++iCh)
         {
             switch (channelInfo.typeDefinition[iCh])
