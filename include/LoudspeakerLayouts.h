@@ -211,7 +211,7 @@ namespace spaudio {
         const std::string& getChannelName() const;
 
         /** Get the channel's type. */
-        const ChannelTypes getChannelType() const;
+        ChannelTypes getChannelType() const;
 
         /** Get the polar position of the channel. This is the actual position of the channel. */
         const PolarPosition<double>& getPolarPosition() const;

@@ -100,7 +100,7 @@ namespace spaudio {
         return name;
     }
 
-    const ChannelTypes Channel::getChannelType() const
+    ChannelTypes Channel::getChannelType() const
     {
         return channelType;
     }
