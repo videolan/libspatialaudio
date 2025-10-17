@@ -43,13 +43,13 @@ namespace spaudio {
          * @param nSampleRate   Sample rate of the signal to be encoded.
          * @return              Returns true if successfully configured.
          */
-        virtual bool Configure(unsigned nOrder, bool b3D, unsigned nSampleRate);
+        virtual bool Configure(unsigned nOrder, bool b3D, unsigned nSampleRate) override;
 
         /** Resets members such as delay lines. */
-        virtual void Reset();
+        virtual void Reset() override;
 
         /** Refreshes coefficients. */
-        virtual void Refresh();
+        virtual void Refresh() override;
 
         /** Encode mono stream to B-Format.
          * @param pfSrc     Pointer to mono signal to be encoded.
