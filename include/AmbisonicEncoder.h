@@ -43,7 +43,7 @@ namespace spaudio {
          * @param nMisc     Sample rate of signal to process.
          * @return          Returns true if encoder is correctly configured.
          */
-        virtual bool Configure(unsigned nOrder, bool b3D, unsigned sampleRate, float fadeTimeMilliSec);
+        bool Configure(unsigned nOrder, bool b3D, unsigned sampleRate, float fadeTimeMilliSec);
 
         /** Recalculate coefficients, and apply normalisation factors. */
         void Refresh();
@@ -75,6 +75,8 @@ namespace spaudio {
         void ProcessAccumul(float* pfSrc, unsigned nSamples, BFormat* pBFDst, unsigned int nOffset = 0, float fGain = 1.f);
 
     private:
+        using AmbisonicSource::Configure;
+
         // The current HOA coefficients
         std::vector<float> m_pfCoeffCurrent;
 
