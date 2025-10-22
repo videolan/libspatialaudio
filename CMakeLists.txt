@@ -1,13 +1,12 @@
 cmake_minimum_required(VERSION 3.5)
 
-set(PACKAGE_VERSION_MAJOR "0")
-set(PACKAGE_VERSION_MINOR "4")
-set(PACKAGE_VERSION_PATCH "0")
-project(spatialaudio VERSION "${PACKAGE_VERSION_MAJOR}.${PACKAGE_VERSION_MINOR}.${PACKAGE_VERSION_PATCH}")
-
+# ABI version
+# Do not forget to increase the major version when breaking ABI!
 set(LIBRARY_SOVERSION_MAJOR "2")
 set(LIBRARY_SOVERSION_MINOR "0")
 set(LIBRARY_SOVERSION_PATCH "0")
+
+project(spatialaudio VERSION 0.4.0)
 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
