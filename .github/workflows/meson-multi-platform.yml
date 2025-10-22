@@ -79,12 +79,11 @@ jobs:
           CC: ${{ matrix.c_compiler }}
           CXX: ${{ matrix.cpp_compiler }}
 
-# Uncomment once tests are added:
-#      - name: Run Tests
-#        run: meson test -C builddir/ -v
-#      - name: Upload Test Log
-#        uses: actions/upload-artifact@v4
-#        if: failure()
-#        with:
-#          name: ${{ matrix.os }}_Meson_Testlog
-#          path: builddir/meson-logs/testlog.txt
+      - name: Run Tests
+        run: meson test -C builddir/ -v
+      - name: Upload Test Log
+        uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: ${{ matrix.os }}_${{ matrix.cpp_compiler }}_Meson_Testlog
+          path: builddir/meson-logs/testlog.txt

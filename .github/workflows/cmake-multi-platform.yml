@@ -65,3 +65,5 @@ jobs:
 
     - name: Build
       run: cmake --build ${{ github.workspace }}/build --config ${{ matrix.build_type }}
+    - name: Tests
+      run: ctest --test-dir ${{ github.workspace }}/build --output-on-failure -C ${{ matrix.build_type }}
