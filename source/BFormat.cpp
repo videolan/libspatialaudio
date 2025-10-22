@@ -14,6 +14,7 @@
 
 
 #include "BFormat.h"
+#include <cassert>
 
 namespace spaudio {
 
@@ -86,7 +87,9 @@ namespace spaudio {
 
     void BFormat::operator = (const BFormat& bf)
     {
-        memcpy(m_pfData.data(), bf.m_pfData.data(), m_nDataLength * sizeof(float));
+        assert(bf.m_pfData.size() <= m_pfData.size());
+        unsigned dataLength = std::min(m_nDataLength, bf.m_nDataLength);
+        memcpy(m_pfData.data(), bf.m_pfData.data(), dataLength * sizeof(float));
     }
 
     bool BFormat::operator == (const BFormat& bf)
