@@ -1,14 +1,14 @@
 project(
     'libspatialaudio',
     'cpp',
-    version : '0.3.1',
+    version : '0.4.0',
     meson_version : '>= 1.1.0',
     default_options : ['warning_level=3', 'cpp_std=c++14'],
 )
 
 # Library (API/ABI) version
 # Do not forget to update the major vesion when breaking ABI.
-spatialaudio_lib_version = '1.0.0'
+spatialaudio_lib_version = '2.0.0'
 
 dependencies = []
 conf_data = configuration_data()
