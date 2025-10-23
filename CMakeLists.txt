@@ -119,13 +119,25 @@ list(APPEND sources
     source/LoudspeakerLayouts.cpp
 )
 
-include_directories(include include/adm include/dsp include/hrtf source source/kiss_fft ${PROJECT_BINARY_DIR})
-
 add_library(spatialaudio ${sources})
 SET_TARGET_PROPERTIES(spatialaudio PROPERTIES OUTPUT_NAME spatialaudio POSITION_INDEPENDENT_CODE ON)
 set_property(TARGET spatialaudio PROPERTY VERSION "${LIBRARY_SOVERSION_MAJOR}.${LIBRARY_SOVERSION_MINOR}.${LIBRARY_SOVERSION_PATCH}")
 set_property(TARGET spatialaudio PROPERTY SOVERSION ${LIBRARY_SOVERSION_MAJOR} )
 set_property(TARGET spatialaudio PROPERTY C_VISIBILITY_PRESET hidden)
+
+target_include_directories(spatialaudio
+    PUBLIC
+        include
+
+    PRIVATE
+        include/adm
+        include/dsp
+        include/hrtf
+        source
+        source/kiss_fft
+        ${CMAKE_CURRENT_BINARY_DIR}
+)
+
 install(TARGETS spatialaudio
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
