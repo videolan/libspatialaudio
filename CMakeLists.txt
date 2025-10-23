@@ -9,7 +9,6 @@ set(LIBRARY_SOVERSION_PATCH "0")
 project(spatialaudio VERSION 0.4.0)
 
 set(CMAKE_CXX_STANDARD 14)
-set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
 # Options
 option(BUILD_SHARED_LIBS "Build shared instead of static libraries" ON)
