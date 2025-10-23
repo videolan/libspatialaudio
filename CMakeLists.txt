@@ -77,48 +77,8 @@ list(APPEND headers
     include/dsp/LinkwitzRileyIIR.h
 )
 
-list(APPEND sources
-    source/AmbisonicEncoder.cpp
-    source/AmbisonicMicrophone.cpp
-    source/AmbisonicCommons.cpp
-    source/mit_hrtf_lib.c
-    source/AmbisonicProcessor.cpp
-    source/AmbisonicRotator.cpp
-    source/AmbisonicDecoder.cpp
-    source/AmbisonicBinauralizer.cpp
-    source/AmbisonicSource.cpp
-    source/AmbisonicShelfFilters.cpp
-    source/AmbisonicOptimFilters.cpp
-    source/hrtf/mit_hrtf.cpp
-    source/hrtf/sofa_hrtf.cpp
-    source/BFormat.cpp
-    source/SpeakersBinauralizer.cpp
-    source/kiss_fft/kiss_fftr.c
-    source/kiss_fft/kiss_fft.c
-    source/AmbisonicAllRAD.cpp
-    source/AmbisonicBase.cpp
-    source/AmbisonicSpeaker.cpp
-    source/AmbisonicEncoderDist.cpp
-    source/AmbisonicZoomer.cpp
-    source/Decorrelator.cpp
-    source/adm/DirectSpeakerGainCalc.cpp
-    source/Renderer.cpp
-    source/adm/AllocentricPannerGainCalc.cpp
-    source/adm/AllocentricExtent.cpp
-    source/adm/GainCalculator.cpp
-    source/GainInterp.cpp
-    source/PointSourcePannerGainCalc.cpp
-    source/adm/PolarExtent.cpp
-    source/RegionHandlers.cpp
-    source/Screen.cpp
-    source/ObjectPanner.cpp
-    source/dsp/IIRFilter.cpp
-    source/dsp/LinkwitzRileyIIR.cpp
-    source/LoudspeakerLayouts.cpp
-)
-
 # Spatialaudio library
-add_library(spatialaudio ${sources})
+add_library(spatialaudio)
 add_library(Spatialaudio::spatialaudio ALIAS spatialaudio)
 set_target_properties(spatialaudio
     PROPERTIES
@@ -129,6 +89,46 @@ set_target_properties(spatialaudio
         C_VISIBILITY_PRESET hidden
 )
 target_compile_features(spatialaudio PUBLIC cxx_std_14)
+target_sources(spatialaudio
+    PRIVATE
+        source/AmbisonicEncoder.cpp
+        source/AmbisonicMicrophone.cpp
+        source/AmbisonicCommons.cpp
+        source/mit_hrtf_lib.c
+        source/AmbisonicProcessor.cpp
+        source/AmbisonicRotator.cpp
+        source/AmbisonicDecoder.cpp
+        source/AmbisonicBinauralizer.cpp
+        source/AmbisonicSource.cpp
+        source/AmbisonicShelfFilters.cpp
+        source/AmbisonicOptimFilters.cpp
+        source/hrtf/mit_hrtf.cpp
+        source/hrtf/sofa_hrtf.cpp
+        source/BFormat.cpp
+        source/SpeakersBinauralizer.cpp
+        source/kiss_fft/kiss_fftr.c
+        source/kiss_fft/kiss_fft.c
+        source/AmbisonicAllRAD.cpp
+        source/AmbisonicBase.cpp
+        source/AmbisonicSpeaker.cpp
+        source/AmbisonicEncoderDist.cpp
+        source/AmbisonicZoomer.cpp
+        source/Decorrelator.cpp
+        source/adm/DirectSpeakerGainCalc.cpp
+        source/Renderer.cpp
+        source/adm/AllocentricPannerGainCalc.cpp
+        source/adm/AllocentricExtent.cpp
+        source/adm/GainCalculator.cpp
+        source/GainInterp.cpp
+        source/PointSourcePannerGainCalc.cpp
+        source/adm/PolarExtent.cpp
+        source/RegionHandlers.cpp
+        source/Screen.cpp
+        source/ObjectPanner.cpp
+        source/dsp/IIRFilter.cpp
+        source/dsp/LinkwitzRileyIIR.cpp
+        source/LoudspeakerLayouts.cpp
+)
 target_include_directories(spatialaudio
     PUBLIC
         include
