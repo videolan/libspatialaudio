@@ -125,24 +125,18 @@ if(MYSOFA_FOUND)
     include_directories(${MYSOFA_INCLUDE_DIRS})
 endif(MYSOFA_FOUND)
 
-if(BUILD_SHARED_LIBS)
-    add_library(spatialaudio-shared SHARED ${sources})
-    if(MYSOFA_FOUND)
-        target_link_libraries(spatialaudio-shared ${MYSOFA_LIBRARIES})
-    endif(MYSOFA_FOUND)
-    SET_TARGET_PROPERTIES(spatialaudio-shared PROPERTIES OUTPUT_NAME spatialaudio)
-    set_property(TARGET spatialaudio-shared PROPERTY VERSION "${LIBRARY_SOVERSION_MAJOR}.${LIBRARY_SOVERSION_MINOR}.${LIBRARY_SOVERSION_PATCH}")
-    set_property(TARGET spatialaudio-shared PROPERTY SOVERSION ${LIBRARY_SOVERSION_MAJOR} )
-    set_property(TARGET spatialaudio-shared PROPERTY C_VISIBILITY_PRESET hidden)
-    install(TARGETS spatialaudio-shared LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR})
-else()
-    add_library(spatialaudio-static STATIC ${sources})
-    if(MYSOFA_FOUND)
-        target_link_libraries(spatialaudio-static ${MYSOFA_LIBRARIES})
-    endif(MYSOFA_FOUND)
-    SET_TARGET_PROPERTIES(spatialaudio-static PROPERTIES OUTPUT_NAME spatialaudio POSITION_INDEPENDENT_CODE ON)
-    install(TARGETS spatialaudio-static ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR})
-endif(BUILD_SHARED_LIBS)
+add_library(spatialaudio ${sources})
+if(MYSOFA_FOUND)
+    target_link_libraries(spatialaudio ${MYSOFA_LIBRARIES})
+endif(MYSOFA_FOUND)
+SET_TARGET_PROPERTIES(spatialaudio PROPERTIES OUTPUT_NAME spatialaudio POSITION_INDEPENDENT_CODE ON)
+set_property(TARGET spatialaudio PROPERTY VERSION "${LIBRARY_SOVERSION_MAJOR}.${LIBRARY_SOVERSION_MINOR}.${LIBRARY_SOVERSION_PATCH}")
+set_property(TARGET spatialaudio PROPERTY SOVERSION ${LIBRARY_SOVERSION_MAJOR} )
+set_property(TARGET spatialaudio PROPERTY C_VISIBILITY_PRESET hidden)
+install(TARGETS spatialaudio
+    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+    ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
+)
 
 configure_file(
   "${CMAKE_CURRENT_SOURCE_DIR}/include/config.h.in"
