@@ -42,7 +42,6 @@ pkg_mod = import('pkgconfig')
 pkg_mod.generate(
     spatialaudio_lib,
     description : 'Spatial audio rendering library',
-    subdirs : 'spatialaudio',
 )
 
 subdir('tests')
