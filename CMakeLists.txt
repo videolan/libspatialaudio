@@ -121,14 +121,7 @@ list(APPEND sources
 
 include_directories(include include/adm include/dsp include/hrtf source source/kiss_fft ${PROJECT_BINARY_DIR})
 
-if(MYSOFA_FOUND)
-    include_directories(${MYSOFA_INCLUDE_DIRS})
-endif(MYSOFA_FOUND)
-
 add_library(spatialaudio ${sources})
-if(MYSOFA_FOUND)
-    target_link_libraries(spatialaudio ${MYSOFA_LIBRARIES})
-endif(MYSOFA_FOUND)
 SET_TARGET_PROPERTIES(spatialaudio PROPERTIES OUTPUT_NAME spatialaudio POSITION_INDEPENDENT_CODE ON)
 set_property(TARGET spatialaudio PROPERTY VERSION "${LIBRARY_SOVERSION_MAJOR}.${LIBRARY_SOVERSION_MINOR}.${LIBRARY_SOVERSION_PATCH}")
 set_property(TARGET spatialaudio PROPERTY SOVERSION ${LIBRARY_SOVERSION_MAJOR} )
@@ -147,6 +140,9 @@ if(MYSOFA_FOUND)
     message("Found mysofa!")
     set(MYSOFA_LIB "-L${MYSOFA_LIBRARY_DIRS} -lmysofa")
     set(MYSOFA_INCLUDE "-I${MYSOFA_INCLUDE_DIRS}")
+    target_include_directories(spatialaudio
+        PUBLIC ${MYSOFA_INCLUDE_DIRS})
+    target_link_libraries(spatialaudio ${MYSOFA_LIBRARIES})
 endif(MYSOFA_FOUND)
 
 configure_file(
