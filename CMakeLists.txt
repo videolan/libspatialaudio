@@ -16,6 +16,11 @@ option(BUILD_SHARED_LIBS "Build shared instead of static libraries" ON)
 option(HAVE_MIT_HRTF "Should MIT HRTF be built-in" ON)
 
 include(GNUInstallDirs)
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
+
+# Dependencies
+find_package(MySofa QUIET)
+set(HAVE_MYSOFA ${MYSOFA_FOUND})
 
 list(APPEND headers
     include/adm/Conversions.h
@@ -114,11 +119,6 @@ list(APPEND sources
     source/dsp/LinkwitzRileyIIR.cpp
     source/LoudspeakerLayouts.cpp
 )
-
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
-
-find_package(MySofa QUIET)
-set(HAVE_MYSOFA ${MYSOFA_FOUND})
 
 include_directories(include include/adm include/dsp include/hrtf source source/kiss_fft ${PROJECT_BINARY_DIR})
 
