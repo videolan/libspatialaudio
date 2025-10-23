@@ -58,3 +58,6 @@
   - Replaced `OutputLayout::_2_7_0`, use `OutputLayout::SevenPointOnePointTwo`
   - Removed `OutputLayout::FivePointZero`
   - Removed `OutputLayout::SevenPointZero`
+- CMake: Removed the `BUILD_STATIC_LIBS` option. Use the `BUILD_SHARED_LIBS`
+  option to control if share or static libraries should be built. If both are
+  needed, build twice explicitly.

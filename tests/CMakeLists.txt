@@ -2,7 +2,7 @@
 
 function(spaudio_add_test name)
     add_executable(${name} "${name}.cpp")
-    target_link_libraries(${name} PRIVATE spatialaudio-static)
+    target_link_libraries(${name} PRIVATE spatialaudio-shared)
     add_test(NAME ${name}
              COMMAND $<TARGET_FILE:${name}>)
 endfunction()
