@@ -141,11 +141,6 @@ target_include_directories(spatialaudio
         ${CMAKE_CURRENT_BINARY_DIR}
 )
 
-configure_file(
-  "${CMAKE_CURRENT_SOURCE_DIR}/include/config.h.in"
-  "${CMAKE_CURRENT_BINARY_DIR}/config.h"
-)
-
 if(MYSOFA_FOUND)
     message("Found mysofa!")
     set(MYSOFA_LIB "-L${MYSOFA_LIBRARY_DIRS} -lmysofa")
@@ -154,6 +149,11 @@ if(MYSOFA_FOUND)
         PUBLIC ${MYSOFA_INCLUDE_DIRS})
     target_link_libraries(spatialaudio ${MYSOFA_LIBRARIES})
 endif(MYSOFA_FOUND)
+
+configure_file(
+    "${CMAKE_CURRENT_SOURCE_DIR}/include/config.h.in"
+    "${CMAKE_CURRENT_BINARY_DIR}/config.h"
+)
 
 configure_file(
     "${CMAKE_CURRENT_SOURCE_DIR}/cmake/spatialaudio.pc.cmake"
