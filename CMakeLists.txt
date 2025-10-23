@@ -11,7 +11,9 @@ project(spatialaudio VERSION 0.4.0)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
+# Options
 option(BUILD_SHARED_LIBS "Build shared instead of static libraries" ON)
+option(HAVE_MIT_HRTF "Should MIT HRTF be built-in" ON)
 
 include(GNUInstallDirs)
 
@@ -142,8 +144,6 @@ else()
     SET_TARGET_PROPERTIES(spatialaudio-static PROPERTIES OUTPUT_NAME spatialaudio CLEAN_DIRECT_OUTPUT 1 POSITION_INDEPENDENT_CODE ON)
     install(TARGETS spatialaudio-static ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR})
 endif(BUILD_SHARED_LIBS)
-
-option(HAVE_MIT_HRTF "Should MIT HRTF be built-in" ON)
 
 configure_file(
   "${CMAKE_CURRENT_SOURCE_DIR}/include/config.h.in"
