@@ -8,8 +8,6 @@ set(LIBRARY_SOVERSION_PATCH "0")
 
 project(spatialaudio VERSION 0.4.0)
 
-set(CMAKE_CXX_STANDARD 14)
-
 # Options
 option(BUILD_SHARED_LIBS "Build shared instead of static libraries" ON)
 option(HAVE_MIT_HRTF "Should MIT HRTF be built-in" ON)
@@ -130,6 +128,7 @@ set_target_properties(spatialaudio
         SOVERSION ${LIBRARY_SOVERSION_MAJOR}
         C_VISIBILITY_PRESET hidden
 )
+target_compile_features(spatialaudio PUBLIC cxx_std_14)
 target_include_directories(spatialaudio
     PUBLIC
         include
