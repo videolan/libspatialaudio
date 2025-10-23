@@ -122,11 +122,14 @@ list(APPEND sources
 # Spatialaudio library
 add_library(spatialaudio ${sources})
 add_library(Spatialaudio::spatialaudio ALIAS spatialaudio)
-SET_TARGET_PROPERTIES(spatialaudio PROPERTIES OUTPUT_NAME spatialaudio POSITION_INDEPENDENT_CODE ON)
-set_property(TARGET spatialaudio PROPERTY VERSION "${LIBRARY_SOVERSION_MAJOR}.${LIBRARY_SOVERSION_MINOR}.${LIBRARY_SOVERSION_PATCH}")
-set_property(TARGET spatialaudio PROPERTY SOVERSION ${LIBRARY_SOVERSION_MAJOR} )
-set_property(TARGET spatialaudio PROPERTY C_VISIBILITY_PRESET hidden)
-
+set_target_properties(spatialaudio
+    PROPERTIES
+        OUTPUT_NAME spatialaudio
+        POSITION_INDEPENDENT_CODE ON
+        VERSION "${LIBRARY_SOVERSION_MAJOR}.${LIBRARY_SOVERSION_MINOR}.${LIBRARY_SOVERSION_PATCH}"
+        SOVERSION ${LIBRARY_SOVERSION_MAJOR}
+        C_VISIBILITY_PRESET hidden
+)
 target_include_directories(spatialaudio
     PUBLIC
         include
