@@ -3,7 +3,7 @@ spatialaudio_sources = files(
     'AmbisonicEncoder.cpp',
     'AmbisonicMicrophone.cpp',
     'AmbisonicCommons.cpp',
-    'mit_hrtf_lib.c',
+    'mit_hrtf/mit_hrtf_lib.c',
     'AmbisonicProcessor.cpp',
     'AmbisonicRotator.cpp',
     'AmbisonicDecoder.cpp',

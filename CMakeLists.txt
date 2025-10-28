@@ -36,7 +36,7 @@ target_sources(spatialaudio
         source/AmbisonicEncoder.cpp
         source/AmbisonicMicrophone.cpp
         source/AmbisonicCommons.cpp
-        source/mit_hrtf_lib.c
+        source/mit_hrtf/mit_hrtf_lib.c
         source/AmbisonicProcessor.cpp
         source/AmbisonicRotator.cpp
         source/AmbisonicDecoder.cpp

@@ -64,6 +64,5 @@ spatialaudio_incdirs_private = [
         'adm',
         'dsp',
         'hrtf',
-        'normal',
     ),
 ]
