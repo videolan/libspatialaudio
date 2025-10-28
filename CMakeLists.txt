@@ -122,7 +122,6 @@ list(APPEND spatialaudio_headers
     include/SpeakersBinauralizer.h
     include/Tools.h
     include/ObjectPanner.h
-    include/t_design_5200.h
     source/kiss_fft/kiss_fft.h
     source/kiss_fft/kiss_fftr.h
     include/dsp/IIRFilter.h

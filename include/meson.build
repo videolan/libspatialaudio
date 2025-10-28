@@ -55,7 +55,6 @@ spatialaudio_headers = [files(
     'ScreenCommon.h',
     'SpeakersBinauralizer.h',
     'Tools.h',
-    't_design_5200.h',
     '../source/kiss_fft/kiss_fft.h',
     '../source/kiss_fft/kiss_fftr.h',
     'dsp/IIRFilter.h',
