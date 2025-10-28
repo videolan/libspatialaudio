@@ -49,8 +49,8 @@ spatialaudio_headers = [files(
     'ScreenCommon.h',
     'SpeakersBinauralizer.h',
     'Tools.h',
-    '../source/kiss_fft/kiss_fft.h',
-    '../source/kiss_fft/kiss_fftr.h',
+    'kiss_fft/kiss_fft.h',
+    'kiss_fft/kiss_fftr.h',
     'dsp/IIRFilter.h',
     'dsp/LinkwitzRileyIIR.h',
 ), config_h]
@@ -60,7 +60,7 @@ spatialaudio_incdirs = include_directories('.')
 spatialaudio_incdirs_private = [
     spatialaudio_incdirs,
     include_directories(
-        '../source/kiss_fft',
+        'kiss_fft',
         'adm',
         'dsp',
         'hrtf',

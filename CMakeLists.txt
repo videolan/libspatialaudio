@@ -116,8 +116,8 @@ list(APPEND spatialaudio_headers
     include/SpeakersBinauralizer.h
     include/Tools.h
     include/ObjectPanner.h
-    source/kiss_fft/kiss_fft.h
-    source/kiss_fft/kiss_fftr.h
+    kiss_fft/kiss_fft.h
+    kiss_fft/kiss_fftr.h
     include/dsp/IIRFilter.h
     include/dsp/LinkwitzRileyIIR.h
 )
@@ -129,8 +129,8 @@ target_include_directories(spatialaudio
         include/adm
         include/dsp
         include/hrtf
+        include/kiss_fft
         source
-        source/kiss_fft
         ${CMAKE_CURRENT_BINARY_DIR}
 )
 
