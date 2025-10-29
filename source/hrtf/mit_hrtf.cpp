@@ -4,7 +4,7 @@
 
 #include <AmbisonicCommons.h>
 
-#include <mit_hrtf.h>
+#include "hrtf/mit_hrtf.h"
 #include "../mit_hrtf/mit_hrtf_lib.h"
 
 #include <vector>

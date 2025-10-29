@@ -11,7 +11,7 @@
 /*#                                                                          #*/
 /*############################################################################*/
 
-#include "LinkwitzRileyIIR.h"
+#include "dsp/LinkwitzRileyIIR.h"
 #include <cmath>
 
 namespace spaudio {

@@ -10,9 +10,9 @@
 /*#                                                                          #*/
 /*############################################################################*/
 
-#include "GainCalculator.h"
+#include "adm/GainCalculator.h"
 
-#include "CartesianLoudspeakerLayouts.h"
+#include "adm/CartesianLoudspeakerLayouts.h"
 #include <limits>
 
 namespace spaudio {

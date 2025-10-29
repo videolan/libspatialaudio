@@ -44,6 +44,6 @@ spatialaudio_lib = library(
     spatialaudio_sources,
     install : true,
     dependencies : dependencies,
-    include_directories : spatialaudio_incdirs_private,
+    include_directories : spatialaudio_incdirs,
     version : spatialaudio_lib_version,
 )

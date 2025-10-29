@@ -12,8 +12,8 @@
 /*############################################################################*/
 
 
-#include "AllocentricExtent.h"
-#include "CartesianLoudspeakerLayouts.h"
+#include "adm/AllocentricExtent.h"
+#include "adm/CartesianLoudspeakerLayouts.h"
 #include <algorithm>
 
 namespace spaudio {

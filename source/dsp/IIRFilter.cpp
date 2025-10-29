@@ -11,7 +11,7 @@
 /*#                                                                          #*/
 /*############################################################################*/
 
-#include "IIRFilter.h"
+#include "dsp/IIRFilter.h"
 #include "Tools.h" // for M_PI
 
 namespace spaudio {

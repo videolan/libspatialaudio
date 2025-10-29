@@ -10,7 +10,7 @@
 /*#                                                                          #*/
 /*############################################################################*/
 
-#include "PolarExtent.h"
+#include "adm/PolarExtent.h"
 
 namespace spaudio {
     namespace adm {

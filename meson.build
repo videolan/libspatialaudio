@@ -29,7 +29,7 @@ subdir('source')
 
 # Make the library usable as a Meson subproject.
 libspatialaudio_dep = declare_dependency(
-    include_directories : spatialaudio_incdirs_private,
+    include_directories : spatialaudio_incdirs,
     dependencies : dependencies,
     link_with : spatialaudio_lib,
 )

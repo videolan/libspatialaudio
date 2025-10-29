@@ -130,11 +130,6 @@ target_sources(spatialaudio
 
 target_include_directories(spatialaudio
     PRIVATE
-        include/adm
-        include/dsp
-        include/hrtf
-        include/kiss_fft
-        source
         ${CMAKE_CURRENT_BINARY_DIR}
 )
 

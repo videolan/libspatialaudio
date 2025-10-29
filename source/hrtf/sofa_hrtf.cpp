@@ -1,7 +1,7 @@
 
 #include <iostream>
 
-#include <sofa_hrtf.h>
+#include "hrtf/sofa_hrtf.h"
 
 #ifdef HAVE_MYSOFA
 

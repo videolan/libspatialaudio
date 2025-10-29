@@ -56,13 +56,3 @@ spatialaudio_headers = [files(
 ), config_h]
 
 spatialaudio_incdirs = include_directories('.')
-
-spatialaudio_incdirs_private = [
-    spatialaudio_incdirs,
-    include_directories(
-        'kiss_fft',
-        'adm',
-        'dsp',
-        'hrtf',
-    ),
-]

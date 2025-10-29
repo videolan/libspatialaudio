@@ -12,9 +12,9 @@
 /*############################################################################*/
 
 
-#include "AllocentricPannerGainCalc.h"
+#include "adm/AllocentricPannerGainCalc.h"
 
-#include "CartesianLoudspeakerLayouts.h"
+#include "adm/CartesianLoudspeakerLayouts.h"
 
 namespace spaudio {
     namespace adm {
