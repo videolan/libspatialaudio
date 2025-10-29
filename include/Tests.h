@@ -16,10 +16,10 @@
 #include <iostream>
 #include <iomanip>
 #include "LoudspeakerLayouts.h"
-#include "LinkwitzRileyIIR.h"
+#include "dsp/LinkwitzRileyIIR.h"
 #include "ObjectPanner.h"
 #include "Renderer.h"
-#include "AllocentricExtent.h"
+#include "adm/AllocentricExtent.h"
 
 using namespace spaudio;
 

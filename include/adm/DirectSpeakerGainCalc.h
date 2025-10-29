@@ -14,12 +14,12 @@
 
 #pragma once
 
-#include "RendererMetadata.h"
-#include "LoudspeakerLayouts.h"
-#include "Tools.h"
+#include "../RendererMetadata.h"
+#include "../LoudspeakerLayouts.h"
+#include "../Tools.h"
 #include "MappingRules.h"
-#include "PointSourcePannerGainCalc.h"
-#include "Screen.h"
+#include "../PointSourcePannerGainCalc.h"
+#include "../Screen.h"
 
 namespace spaudio {
     namespace adm {

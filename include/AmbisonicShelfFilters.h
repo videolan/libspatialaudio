@@ -18,7 +18,7 @@
 
 #include "AmbisonicBase.h"
 #include "BFormat.h"
-#include "kiss_fftr.h"
+#include "kiss_fft/kiss_fftr.h"
 #include "AmbisonicPsychoacousticFilters.h"
 
 namespace spaudio {

@@ -22,7 +22,7 @@
 #include "RendererMetadata.h"
 #include "Coordinates.h"
 #include "ScreenCommon.h"
-#include "Conversions.h"
+#include "adm/Conversions.h"
 
 namespace spaudio {
 

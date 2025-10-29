@@ -36,7 +36,10 @@ libspatialaudio_dep = declare_dependency(
 meson.override_dependency('libspatialaudio', libspatialaudio_dep)
 
 # Make this library properly installable
-install_headers(spatialaudio_headers, subdir : 'spatialaudio')
+install_headers(spatialaudio_headers,
+    subdir : 'spatialaudio',
+    preserve_path : true,
+)
 
 pkg_mod = import('pkgconfig')
 pkg_mod.generate(

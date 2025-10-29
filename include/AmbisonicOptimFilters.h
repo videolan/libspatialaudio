@@ -18,7 +18,7 @@
 
 #include "AmbisonicBase.h"
 #include "BFormat.h"
-#include "LinkwitzRileyIIR.h"
+#include "dsp/LinkwitzRileyIIR.h"
 
 namespace spaudio {
 

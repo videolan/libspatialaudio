@@ -12,13 +12,13 @@
 
 #pragma once
 
-#include "Coordinates.h"
-#include "Tools.h"
-#include "RendererMetadata.h"
+#include "../Coordinates.h"
+#include "../Tools.h"
+#include "../RendererMetadata.h"
 #include "PolarExtent.h"
 #include "AllocentricExtent.h"
-#include "AmbisonicEncoder.h"
-#include "Screen.h"
+#include "../AmbisonicEncoder.h"
+#include "../Screen.h"
 
 namespace spaudio {
     namespace adm {

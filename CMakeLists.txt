@@ -70,61 +70,65 @@ target_sources(spatialaudio
         source/dsp/IIRFilter.cpp
         source/dsp/LinkwitzRileyIIR.cpp
         source/LoudspeakerLayouts.cpp
-)
-list(APPEND spatialaudio_headers
-    include/adm/Conversions.h
-    include/adm/MappingRules.h
-    include/adm/CartesianLoudspeakerLayouts.h
-    include/adm/DirectSpeakerGainCalc.h
-    include/RendererMetadata.h
-    include/Renderer.h
-    include/adm/AllocentricPannerGainCalc.h
-    include/adm/AllocentricExtent.h
-    include/AmbisonicAllRAD.h
-    include/AmbisonicBase.h
-    include/AmbisonicBinauralizer.h
-    include/AmbisonicCommons.h
-    include/AmbisonicDecoder.h
-    include/AmbisonicDecoderPresets.h
-    include/AmbisonicEncoderDist.h
-    include/AmbisonicEncoder.h
-    include/AmbisonicMicrophone.h
-    include/AmbisonicProcessor.h
-    include/AmbisonicPsychoacousticFilters.h
-    include/AmbisonicRotator.h
-    include/Ambisonics.h
-    include/AmbisonicShelfFilters.h
-    include/AmbisonicOptimFilters.h
-    include/AmbisonicSource.h
-    include/AmbisonicSpeaker.h
-    include/AmbisonicZoomer.h
-    include/BFormat.h
-    include/Coordinates.h
-    include/Decorrelator.h
-    include/adm/GainCalculator.h
-    include/GainInterp.h
-    include/hrtf/hrtf.h
-    include/hrtf/mit_hrtf.h
-    include/hrtf/sofa_hrtf.h
-    include/LoudspeakerLayouts.h
-    include/LoudspeakerLayoutHulls.h
-    include/PointSourcePannerGainCalc.h
-    include/adm/PolarExtent.h
-    include/RegionHandlers.h
-    include/Screen.h
-    include/ScreenCommon.h
-    include/SpeakersBinauralizer.h
-    include/Tools.h
-    include/ObjectPanner.h
-    kiss_fft/kiss_fft.h
-    kiss_fft/kiss_fftr.h
-    include/dsp/IIRFilter.h
-    include/dsp/LinkwitzRileyIIR.h
-)
-target_include_directories(spatialaudio
-    PUBLIC
-        include
 
+    PUBLIC
+        FILE_SET HEADERS
+        TYPE HEADERS
+        BASE_DIRS
+            include
+            source
+        FILES
+            include/adm/Conversions.h
+            include/adm/MappingRules.h
+            include/adm/CartesianLoudspeakerLayouts.h
+            include/adm/DirectSpeakerGainCalc.h
+            include/RendererMetadata.h
+            include/Renderer.h
+            include/adm/AllocentricPannerGainCalc.h
+            include/adm/AllocentricExtent.h
+            include/AmbisonicAllRAD.h
+            include/AmbisonicBase.h
+            include/AmbisonicBinauralizer.h
+            include/AmbisonicCommons.h
+            include/AmbisonicDecoder.h
+            include/AmbisonicDecoderPresets.h
+            include/AmbisonicEncoderDist.h
+            include/AmbisonicEncoder.h
+            include/AmbisonicMicrophone.h
+            include/AmbisonicProcessor.h
+            include/AmbisonicPsychoacousticFilters.h
+            include/AmbisonicRotator.h
+            include/Ambisonics.h
+            include/AmbisonicShelfFilters.h
+            include/AmbisonicOptimFilters.h
+            include/AmbisonicSource.h
+            include/AmbisonicSpeaker.h
+            include/AmbisonicZoomer.h
+            include/BFormat.h
+            include/Coordinates.h
+            include/Decorrelator.h
+            include/adm/GainCalculator.h
+            include/GainInterp.h
+            include/hrtf/hrtf.h
+            include/hrtf/mit_hrtf.h
+            include/hrtf/sofa_hrtf.h
+            include/LoudspeakerLayouts.h
+            include/LoudspeakerLayoutHulls.h
+            include/PointSourcePannerGainCalc.h
+            include/adm/PolarExtent.h
+            include/RegionHandlers.h
+            include/Screen.h
+            include/ScreenCommon.h
+            include/SpeakersBinauralizer.h
+            include/Tools.h
+            include/ObjectPanner.h
+            include/kiss_fft/kiss_fft.h
+            include/kiss_fft/kiss_fftr.h
+            include/dsp/IIRFilter.h
+            include/dsp/LinkwitzRileyIIR.h
+)
+
+target_include_directories(spatialaudio
     PRIVATE
         include/adm
         include/dsp
@@ -157,9 +161,9 @@ configure_file(
 install(TARGETS spatialaudio
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
+    FILE_SET HEADERS
+        DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/spatialaudio
 )
-install(FILES ${spatialaudio_headers}
-    DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/spatialaudio)
 install(FILES "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}.pc"
     DESTINATION ${CMAKE_INSTALL_LIBDIR}/pkgconfig)
 install(FILES ${PROJECT_BINARY_DIR}/config.h

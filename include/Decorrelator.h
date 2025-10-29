@@ -14,7 +14,7 @@
 
 #include "LoudspeakerLayouts.h"
 #include "Tools.h"
-#include "kiss_fftr.h"
+#include "kiss_fft/kiss_fftr.h"
 
 namespace spaudio {
 

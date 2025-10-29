@@ -13,7 +13,7 @@
 
 #pragma once
 
-#include "LoudspeakerLayouts.h"
+#include "../LoudspeakerLayouts.h"
 
 namespace spaudio {
     namespace adm {

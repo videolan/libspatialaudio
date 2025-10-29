@@ -13,8 +13,8 @@
 
 #pragma once
 
-#include "Tools.h"
-#include "RendererMetadata.h"
+#include "../Tools.h"
+#include "../RendererMetadata.h"
 
 namespace spaudio {
     namespace adm {

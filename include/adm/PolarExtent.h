@@ -12,10 +12,10 @@
 
 #pragma once
 
-#include "Coordinates.h"
-#include "Tools.h"
-#include "PointSourcePannerGainCalc.h"
-#include "AmbisonicSource.h"
+#include "../Coordinates.h"
+#include "../Tools.h"
+#include "../PointSourcePannerGainCalc.h"
+#include "../AmbisonicSource.h"
 
 namespace spaudio {
     namespace adm {

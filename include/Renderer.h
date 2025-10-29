@@ -20,11 +20,11 @@
 #include "RendererMetadata.h"
 #include "LoudspeakerLayouts.h"
 #include "Tools.h"
-#include "Conversions.h"
+#include "adm/Conversions.h"
 #include "GainInterp.h"
-#include "DirectSpeakerGainCalc.h"
+#include "adm/DirectSpeakerGainCalc.h"
 #include "Decorrelator.h"
-#include "GainCalculator.h"
+#include "adm/GainCalculator.h"
 
 namespace spaudio {
 
