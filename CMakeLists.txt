@@ -29,6 +29,7 @@ set_target_properties(spatialaudio
         VERSION "${LIBRARY_SOVERSION_MAJOR}.${LIBRARY_SOVERSION_MINOR}.${LIBRARY_SOVERSION_PATCH}"
         SOVERSION ${LIBRARY_SOVERSION_MAJOR}
         C_VISIBILITY_PRESET hidden
+        CXX_VISIBILITY_PRESET hidden
 )
 target_compile_features(spatialaudio PUBLIC cxx_std_14)
 target_sources(spatialaudio
@@ -126,11 +127,16 @@ target_sources(spatialaudio
             include/kiss_fft/kiss_fftr.h
             include/dsp/IIRFilter.h
             include/dsp/LinkwitzRileyIIR.h
+            include/SpatialaudioAPI.h
 )
 
 target_include_directories(spatialaudio
     PRIVATE
         ${CMAKE_CURRENT_BINARY_DIR}
+)
+target_compile_definitions(spatialaudio
+    PRIVATE
+        SPATIALAUDIO_COMPILATION
 )
 
 if(MYSOFA_FOUND)

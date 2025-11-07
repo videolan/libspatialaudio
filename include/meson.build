@@ -53,6 +53,7 @@ spatialaudio_headers = [files(
     'kiss_fft/kiss_fftr.h',
     'dsp/IIRFilter.h',
     'dsp/LinkwitzRileyIIR.h',
+    'SpatialaudioAPI.h',
 ), config_h]
 
 spatialaudio_incdirs = include_directories('.')

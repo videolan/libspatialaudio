@@ -39,6 +39,8 @@ spatialaudio_sources = files(
     'ObjectPanner.cpp',
 )
 
+spatialaudio_clike_args = ['-DSPATIALAUDIO_COMPILATION']
+
 spatialaudio_lib = library(
     'spatialaudio',
     spatialaudio_sources,
@@ -46,4 +48,7 @@ spatialaudio_lib = library(
     dependencies : dependencies,
     include_directories : spatialaudio_incdirs,
     version : spatialaudio_lib_version,
+    gnu_symbol_visibility : 'hidden',
+    c_args : spatialaudio_clike_args,
+    cpp_args : spatialaudio_clike_args,
 )
