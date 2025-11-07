@@ -16,6 +16,7 @@
 #ifndef _AMBISONIC_SPEAKER_H
 #define _AMBISONIC_SPEAKER_H
 
+#include "SpatialaudioAPI.h"
 #include "AmbisonicSource.h"
 #include "BFormat.h"
 
@@ -25,7 +26,7 @@ namespace spaudio {
 
     /** This is a speaker class to be used in the decoder. */
 
-    class AmbisonicSpeaker : public AmbisonicSource
+    class SPAUDIO_API AmbisonicSpeaker : public AmbisonicSource
     {
     public:
         AmbisonicSpeaker();

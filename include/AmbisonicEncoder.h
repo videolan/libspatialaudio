@@ -16,6 +16,7 @@
 #ifndef _AMBISONIC_ENCODER_H
 #define _AMBISONIC_ENCODER_H
 
+#include "SpatialaudioAPI.h"
 #include "AmbisonicSource.h"
 #include "BFormat.h"
 #include "GainInterp.h"
@@ -30,7 +31,7 @@ namespace spaudio {
         into account. If distance cues are going to be used, then use
         AmbisonicEncoderDist instead. */
 
-    class AmbisonicEncoder : public AmbisonicSource
+    class SPAUDIO_API AmbisonicEncoder : public AmbisonicSource
     {
     public:
         AmbisonicEncoder();

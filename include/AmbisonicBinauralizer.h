@@ -20,6 +20,7 @@
 #include <string>
 #include <vector>
 
+#include "SpatialaudioAPI.h"
 #include "AmbisonicShelfFilters.h"
 #include "AmbisonicDecoder.h"
 #include "AmbisonicEncoder.h"
@@ -34,7 +35,7 @@ namespace spaudio {
 
     /** B-Format to binaural decoder. */
 
-    class AmbisonicBinauralizer : public AmbisonicBase
+    class SPAUDIO_API AmbisonicBinauralizer : public AmbisonicBase
     {
     public:
         AmbisonicBinauralizer();

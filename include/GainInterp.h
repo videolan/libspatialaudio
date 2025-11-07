@@ -13,6 +13,7 @@
 #pragma once
 
 #include <vector>
+#include "SpatialaudioAPI.h"
 
 namespace spaudio {
 
@@ -20,7 +21,7 @@ namespace spaudio {
     *	A class to handle the interpolation from one gain vector applied to a mono input over a specified duration
     */
     template <typename T>
-    class GainInterp
+    class SPAUDIO_API GainInterp
     {
     public:
 

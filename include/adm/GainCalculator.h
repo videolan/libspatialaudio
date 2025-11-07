@@ -12,6 +12,7 @@
 
 #pragma once
 
+#include "../SpatialaudioAPI.h"
 #include "../Coordinates.h"
 #include "../Tools.h"
 #include "../RendererMetadata.h"
@@ -24,7 +25,7 @@ namespace spaudio {
     namespace adm {
 
         /** A class to apply ChannelLocking as described in Rec. ITU-R BS.2127-1 sec. 7.3.6 pg44. */
-        class ChannelLockHandler
+        class SPAUDIO_API ChannelLockHandler
         {
         public:
             ChannelLockHandler(const Layout& layout);
@@ -59,7 +60,7 @@ namespace spaudio {
             std::vector<CartesianPosition<double>> m_spkPos;
         };
 
-        class PolarChannelLockHandler : public ChannelLockHandler
+        class SPAUDIO_API PolarChannelLockHandler : public ChannelLockHandler
         {
         public:
             PolarChannelLockHandler(const Layout& layout);
@@ -68,7 +69,7 @@ namespace spaudio {
         private:
             double calculateDistance(const CartesianPosition<double>& srcPos, const CartesianPosition<double>& spkPos) override;
         };
-        class AlloChannelLockHandler : public ChannelLockHandler
+        class SPAUDIO_API AlloChannelLockHandler : public ChannelLockHandler
         {
         public:
             AlloChannelLockHandler(const Layout& layout);
@@ -79,7 +80,7 @@ namespace spaudio {
         };
 
         /** A class to handle zone exclusion as described in Rec. ITU-R BS.2127-1 sec. 7.3.12 pg. 60. */
-        class ZoneExclusionHandler
+        class SPAUDIO_API ZoneExclusionHandler
         {
         public:
             ZoneExclusionHandler(const Layout& layout);
@@ -141,7 +142,7 @@ namespace spaudio {
         };
 
         /** The main ADM gain calculator class which processes metadata to calculate direct and diffuse gains. */
-        class ObjectGainCalculator
+        class SPAUDIO_API ObjectGainCalculator
         {
         public:
             ObjectGainCalculator(Layout outputLayoutNoLFE);

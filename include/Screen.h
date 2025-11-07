@@ -13,6 +13,7 @@
 
 #pragma once
 
+#include "SpatialaudioAPI.h"
 #include "adm/Conversions.h"
 #include "ScreenCommon.h"
 #include "LoudspeakerLayouts.h"
@@ -24,7 +25,7 @@ namespace spaudio {
     /** The the position of the source from a position relative to the reference screen to a position
      *  relative to the reproduction screen.
     */
-    class ScreenScaleHandler {
+    class SPAUDIO_API ScreenScaleHandler {
     public:
         ScreenScaleHandler(const Optional<Screen>& reproductionScreen, const Layout& layout);
         ~ScreenScaleHandler();
@@ -60,7 +61,7 @@ namespace spaudio {
     };
 
     /** Apply screen edge locking to supplied position based on the reproduction screen and (if cartesian == true) the layout. */
-    class ScreenEdgeLockHandler
+    class SPAUDIO_API ScreenEdgeLockHandler
     {
     public:
         ScreenEdgeLockHandler(const Optional<Screen>& reproductionScreen, const Layout& layout);

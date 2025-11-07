@@ -17,6 +17,7 @@
 #ifndef _AMBISONIC_ZOOMER_H
 #define _AMBISONIC_ZOOMER_H
 
+#include "SpatialaudioAPI.h"
 #include "AmbisonicBase.h"
 #include "AmbisonicDecoder.h"
 #include "BFormat.h"
@@ -29,7 +30,7 @@ namespace spaudio {
 
     /** This object is used to apply a zoom effect into BFormat soundfields. */
 
-    class AmbisonicZoomer : public AmbisonicBase
+    class SPAUDIO_API AmbisonicZoomer : public AmbisonicBase
     {
     public:
         AmbisonicZoomer();

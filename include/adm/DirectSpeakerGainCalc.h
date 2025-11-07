@@ -14,6 +14,7 @@
 
 #pragma once
 
+#include "../SpatialaudioAPI.h"
 #include "../RendererMetadata.h"
 #include "../LoudspeakerLayouts.h"
 #include "../Tools.h"
@@ -25,7 +26,7 @@ namespace spaudio {
     namespace adm {
 
         /** A class to calculate the gains to be applied to a set of loudspeakers for DirectSpeaker processing. */
-        class DirectSpeakersGainCalc
+        class SPAUDIO_API DirectSpeakersGainCalc
         {
         public:
             DirectSpeakersGainCalc(Layout layoutWithLFE);

@@ -15,11 +15,13 @@
 
 #include <vector>
 
+#include "../SpatialaudioAPI.h"
+
 namespace spaudio {
 
     /** A simple biquad IIR filter that creates either low- or high-pass Butterworth filters
     */
-    class IIRFilter
+    class SPAUDIO_API IIRFilter
     {
     public:
         IIRFilter();

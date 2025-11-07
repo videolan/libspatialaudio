@@ -17,6 +17,7 @@
 #ifndef _AMBISONIC_DECODER_H
 #define _AMBISONIC_DECODER_H
 
+#include "SpatialaudioAPI.h"
 #include "AmbisonicBase.h"
 #include "BFormat.h"
 #include "AmbisonicSpeaker.h"
@@ -44,7 +45,7 @@ namespace spaudio {
     /** This is a basic decoder, handling both default and custom speaker
         configurations. */
 
-    class AmbisonicDecoder : public AmbisonicBase
+    class SPAUDIO_API AmbisonicDecoder : public AmbisonicBase
     {
     public:
         AmbisonicDecoder();

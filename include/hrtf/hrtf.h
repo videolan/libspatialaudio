@@ -1,9 +1,11 @@
 #ifndef HRTF_H
 #define HRTF_H
 
+#include "../SpatialaudioAPI.h"
+
 namespace spaudio {
 
-    class HRTF
+    class SPAUDIO_API HRTF
     {
     public:
         HRTF(unsigned i_sampleRate)

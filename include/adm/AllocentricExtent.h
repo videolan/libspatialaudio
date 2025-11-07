@@ -13,6 +13,7 @@
 
 #pragma once
 
+#include "../SpatialaudioAPI.h"
 #include "../LoudspeakerLayouts.h"
 #include "AllocentricPannerGainCalc.h"
 
@@ -20,7 +21,7 @@ namespace spaudio {
     namespace adm {
 
         /** Class to calculate the extent panning gains using the ADM cartesian/allocentric method on the specified loudspeaker layout. */
-        class AllocentricExtent
+        class SPAUDIO_API AllocentricExtent
         {
         public:
             AllocentricExtent(const Layout& layout);

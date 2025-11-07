@@ -14,6 +14,7 @@
 #pragma once
 
 #include "Tools.h"
+#include "SpatialaudioAPI.h"
 
 #include <assert.h>
 #include <set>
@@ -55,7 +56,7 @@ namespace spaudio {
     }
 
     // Holds the output channel indices and their polar coordinates
-    class RegionHandler
+    class SPAUDIO_API RegionHandler
     {
     public:
         RegionHandler(std::vector<unsigned int> chanInds, std::vector<PolarPosition<double>> polPos)
@@ -73,7 +74,7 @@ namespace spaudio {
     /**
         Holds a triplet of speaker indices and calculates the gain for a given source direction
     */
-    class Triplet : public RegionHandler
+    class SPAUDIO_API Triplet : public RegionHandler
     {
     public:
         Triplet(std::vector<unsigned int> chanInds, std::vector<PolarPosition<double>> polPos);
@@ -90,7 +91,7 @@ namespace spaudio {
         Holds a VirtualNgon of speaker indices and calculates the gain for a given source direction.
         A VirtualNgon has a virtual loudspeaker placed at its centre whose gain is mixed to the real loudspeakers
     */
-    class VirtualNgon : public RegionHandler
+    class SPAUDIO_API VirtualNgon : public RegionHandler
     {
     public:
         VirtualNgon(std::vector<unsigned int> chanInds, std::vector<PolarPosition<double>> polPos, PolarPosition<double> centrePosition);
@@ -110,7 +111,7 @@ namespace spaudio {
         Holds a VirtualNgon of speaker indices and calculates the gain for a given source direction.
         See Rec. ITU-R BS.2127-0 sec. 6.1.2.3 for full details of the gain calculation
     */
-    class QuadRegion : public RegionHandler
+    class SPAUDIO_API QuadRegion : public RegionHandler
     {
     public:
         QuadRegion(std::vector<unsigned int> chanInds, std::vector<PolarPosition<double>> polPos);

@@ -16,6 +16,7 @@
 #ifndef _AMBISONIC_OPTIM_FILTERS_H
 #define    _AMBISONIC_OPTIM_FILTERS_H
 
+#include "SpatialaudioAPI.h"
 #include "AmbisonicBase.h"
 #include "BFormat.h"
 #include "dsp/LinkwitzRileyIIR.h"
@@ -25,7 +26,7 @@ namespace spaudio {
     /** This class takes an ambisonic signal and applies shelf filtering that psychoacoustically
      *  optimise the high frequency band.
      */
-    class AmbisonicOptimFilters : public AmbisonicBase
+    class SPAUDIO_API AmbisonicOptimFilters : public AmbisonicBase
     {
     public:
         AmbisonicOptimFilters();

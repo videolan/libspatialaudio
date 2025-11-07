@@ -12,6 +12,7 @@
 
 #pragma once
 
+#include "SpatialaudioAPI.h"
 #include "LoudspeakerLayouts.h"
 #include "Tools.h"
 #include "kiss_fft/kiss_fftr.h"
@@ -24,7 +25,7 @@ namespace spaudio {
 
         It is based on Rec. ITU-R BS.2127-0 section 7.4 pg.63
     */
-    class Decorrelator
+    class SPAUDIO_API Decorrelator
     {
     public:
         Decorrelator();

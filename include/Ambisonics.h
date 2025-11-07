@@ -15,7 +15,6 @@
 #ifndef _AMBISONICS_H
 #define _AMBISONICS_H
 
-
 #include "AmbisonicCommons.h"
 #include "AmbisonicBase.h"
 #include "BFormat.h"

@@ -16,6 +16,7 @@
 #ifndef _BFORMAT_H
 #define _BFORMAT_H
 
+#include "SpatialaudioAPI.h"
 #include "AmbisonicBase.h"
 #include <memory>
 #include <vector>
@@ -28,7 +29,7 @@ namespace spaudio {
         allocated for the number of channels needed for the given Ambisonic
         configuration (order and 2D/3D) and the number of samples. */
 
-    class BFormat : public AmbisonicBase
+    class SPAUDIO_API BFormat : public AmbisonicBase
     {
     public:
         BFormat();

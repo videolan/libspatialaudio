@@ -17,6 +17,7 @@
 #ifndef _AMBISONIC_SOURCE_H
 #define _AMBISONIC_SOURCE_H
 
+#include "SpatialaudioAPI.h"
 #include "AmbisonicBase.h"
 
 #include <vector>
@@ -29,7 +30,7 @@ namespace spaudio {
         mono stream into a 3D soundfield, or a single speaker for decoding a 3D
         soundfield. */
 
-    class AmbisonicSource : public AmbisonicBase
+    class SPAUDIO_API AmbisonicSource : public AmbisonicBase
     {
     public:
         AmbisonicSource();

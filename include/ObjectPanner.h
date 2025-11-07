@@ -15,6 +15,8 @@
 #pragma once
 
 #include <memory>
+
+#include "SpatialaudioAPI.h"
 #include "PointSourcePannerGainCalc.h"
 #include "GainInterp.h"
 #include "LoudspeakerLayouts.h"
@@ -24,7 +26,7 @@ namespace spaudio {
 
     /** Pan a point source on a loudspeaker layout in real-time.
      */
-    class ObjectPanner
+    class SPAUDIO_API ObjectPanner
     {
     public:
         ObjectPanner();

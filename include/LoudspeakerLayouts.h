@@ -19,6 +19,8 @@
 #include <vector>
 #include <map>
 #include <sstream>
+
+#include "SpatialaudioAPI.h"
 #include "RendererMetadata.h"
 #include "Coordinates.h"
 #include "ScreenCommon.h"
@@ -185,7 +187,7 @@ namespace spaudio {
     }
 
     // Information about a speaker channel (as opposed to an audio channel, which could be Object, HOA, etc.)
-    class Channel
+    class SPAUDIO_API Channel
     {
     public:
         /** Default constructor. Creates a FrontCentre channel */
@@ -241,7 +243,7 @@ namespace spaudio {
     };
 
     // Class used to store the layout information
-    class Layout
+    class SPAUDIO_API Layout
     {
     public:
         Layout();

@@ -7,7 +7,7 @@
 
 namespace spaudio {
 
-    class MIT_HRTF : public HRTF
+    class SPAUDIO_API MIT_HRTF : public HRTF
     {
     public:
         MIT_HRTF(unsigned i_sampleRate);

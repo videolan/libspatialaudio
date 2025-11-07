@@ -17,6 +17,7 @@
 #include <vector>
 #include <string>
 #include <map>
+#include "SpatialaudioAPI.h"
 #include "Coordinates.h"
 #include "ScreenCommon.h"
 
@@ -33,7 +34,7 @@ namespace spaudio {
 
     /** A simple class similar to c++ 17's std::optional indicate that the metadata is optional. */
     template<typename T>
-    class Optional
+    class SPAUDIO_API Optional
     {
     public:
         Optional() : m_data(), m_hasValue(false)
@@ -236,7 +237,7 @@ namespace spaudio {
             && lhs.minElevation == rhs.minElevation && lhs.maxElevation == rhs.maxElevation;
     }
 
-    class ExclusionZone
+    class SPAUDIO_API ExclusionZone
     {
     public:
         ExclusionZone() = default;
@@ -305,7 +306,7 @@ namespace spaudio {
         Optional<CartesianExclusionZone> m_cartesianZone;
     };
 
-    class ObjectPosition
+    class SPAUDIO_API ObjectPosition
     {
     public:
         ObjectPosition() = default;

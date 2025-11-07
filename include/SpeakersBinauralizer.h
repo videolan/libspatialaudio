@@ -3,6 +3,7 @@
 
 #include <vector>
 
+#include "SpatialaudioAPI.h"
 #include "AmbisonicCommons.h"
 #include "BFormat.h"
 #include "AmbisonicSpeaker.h"
@@ -13,7 +14,7 @@ namespace spaudio {
     /** A class to convert speaker signals to binaural by applying the
     appropriate static HRTFs.
     */
-    class SpeakersBinauralizer : public AmbisonicBinauralizer
+    class SPAUDIO_API SpeakersBinauralizer : public AmbisonicBinauralizer
     {
     public:
         SpeakersBinauralizer();

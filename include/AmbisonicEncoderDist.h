@@ -16,6 +16,7 @@
 #ifndef _AMBISONIC_ENCODER_DIST_H
 #define _AMBISONIC_ENCODER_DIST_H
 
+#include "SpatialaudioAPI.h"
 #include "AmbisonicEncoder.h"
 
 namespace spaudio {
@@ -30,7 +31,7 @@ namespace spaudio {
         implementing "W-Panning"(interior effect). If distance is not an issue,
         then use AmbisonicEncoder which is more efficient. */
 
-    class AmbisonicEncoderDist : public AmbisonicEncoder
+    class SPAUDIO_API AmbisonicEncoderDist : public AmbisonicEncoder
     {
     public:
         AmbisonicEncoderDist();

@@ -13,7 +13,7 @@
 
 namespace spaudio {
 
-    class SOFA_HRTF : public HRTF
+    class SPAUDIO_API SOFA_HRTF : public HRTF
     {
     public:
         SOFA_HRTF(std::string path, unsigned i_sampleRate);

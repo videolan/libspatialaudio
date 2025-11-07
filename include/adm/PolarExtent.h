@@ -12,6 +12,7 @@
 
 #pragma once
 
+#include "../SpatialaudioAPI.h"
 #include "../Coordinates.h"
 #include "../Tools.h"
 #include "../PointSourcePannerGainCalc.h"
@@ -34,7 +35,7 @@ namespace spaudio {
          *  to each of the virtual source directions. Finally, the panning gain vectors are weighted
          *  by the weighting function and summed together for each loudspeaker.
          */
-        class SpreadPanner
+        class SPAUDIO_API SpreadPanner
         {
         public:
             SpreadPanner(PointSourcePannerGainCalc& psp);
@@ -102,7 +103,7 @@ namespace spaudio {
 
 
         /** Class that handles the extent parameters to calculate a gain vector */
-        class PolarExtentHandler
+        class SPAUDIO_API PolarExtentHandler
         {
         public:
             PolarExtentHandler(PointSourcePannerGainCalc& psp);

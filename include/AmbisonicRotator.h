@@ -16,6 +16,7 @@
 #ifndef _AMBISONIC_ROTATOR_H
 #define    _AMBISONIC_ROTATOR_H
 
+#include "SpatialaudioAPI.h"
 #include "AmbisonicBase.h"
 #include "BFormat.h"
 
@@ -31,7 +32,7 @@ namespace spaudio {
     /** This class is used to rotate the sound field by the angles specified in RotationOrientation.
      *  It includes rotation matrix coefficient smoothing to minimise artefacts when applying real-time rotations.
      */
-    class AmbisonicRotator : public AmbisonicBase
+    class SPAUDIO_API AmbisonicRotator : public AmbisonicBase
     {
     public:
 

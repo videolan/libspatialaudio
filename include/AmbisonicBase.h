@@ -16,6 +16,7 @@
 #ifndef _AMBISONIC_BASE_H
 #define    _AMBISONIC_BASE_H
 
+#include "SpatialaudioAPI.h"
 #include "AmbisonicCommons.h"
 
 namespace spaudio {
@@ -25,7 +26,7 @@ namespace spaudio {
     /** This is the base class for most if not all of the classes that make up this
         library. */
 
-    class AmbisonicBase
+    class SPAUDIO_API AmbisonicBase
     {
     public:
         AmbisonicBase();

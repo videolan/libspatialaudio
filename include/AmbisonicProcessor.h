@@ -17,6 +17,7 @@
 #ifndef _AMBISONIC_PROCESSOR_H
 #define    _AMBISONIC_PROCESSOR_H
 
+#include "SpatialaudioAPI.h"
 #include "AmbisonicBase.h"
 #include "BFormat.h"
 #include "AmbisonicZoomer.h"
@@ -41,7 +42,7 @@ namespace spaudio {
 
 
     /// Struct for soundfield rotation.
-    class Orientation
+    class SPAUDIO_API Orientation
     {
     public:
         Orientation(float fYaw, float fPitch, float fRoll)
@@ -107,7 +108,7 @@ namespace spaudio {
      *  Please use AmbisonicRotator instead.
      */
 
-    class
+    class SPAUDIO_API
         [[deprecated("This class is deprecated. Please use AmbisonicRotator class instead.")]]
     AmbisonicProcessor : public AmbisonicBase
     {

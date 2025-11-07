@@ -14,6 +14,7 @@
 
 #pragma once
 
+#include "SpatialaudioAPI.h"
 #include "LoudspeakerLayouts.h"
 #include "Tools.h"
 #include "RegionHandlers.h"
@@ -24,7 +25,7 @@
 namespace spaudio {
 
     /** Class to calculate the panning gains for a point source on the specified loudspeaker layout. */
-    class PointSourcePannerGainCalc
+    class SPAUDIO_API PointSourcePannerGainCalc
     {
     public:
         PointSourcePannerGainCalc(const Layout& layout);

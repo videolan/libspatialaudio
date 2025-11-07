@@ -16,6 +16,7 @@
 
 #include <vector>
 #include <string>
+#include "SpatialaudioAPI.h"
 #include "Ambisonics.h"
 #include "RendererMetadata.h"
 #include "LoudspeakerLayouts.h"
@@ -45,7 +46,7 @@ namespace spaudio {
      *	Required to meet full compliance with Rec. ITU-R BS.2127-0:
      *	- Handle Matrix types (need samples to be able to test)
      */
-    class Renderer
+    class SPAUDIO_API Renderer
     {
     public:
         Renderer();

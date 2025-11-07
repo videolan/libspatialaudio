@@ -16,6 +16,7 @@
 #ifndef _AMBISONIC_SHELF_FILTERS_H
 #define    _AMBISONIC_SHELF_FILTERS_H
 
+#include "SpatialaudioAPI.h"
 #include "AmbisonicBase.h"
 #include "BFormat.h"
 #include "kiss_fft/kiss_fftr.h"
@@ -26,7 +27,7 @@ namespace spaudio {
     /** This class applies frequency dependent basic & max-rE optimisation to a B-format signal using linear phase FIR filters.
      *  This class is deprecated in favour of AmbisonicOptimFilters, which uses LinkwitzRiley IIR filters to apply frequency dependent gains.
      */
-    class
+    class SPAUDIO_API
         [[deprecated("This class is deprecated. Please use AmbisonicOptimFilters class instead.")]]
     AmbisonicShelfFilters : public AmbisonicBase
     {

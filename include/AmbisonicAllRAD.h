@@ -17,6 +17,7 @@
 #define _AMBISONIC_ALLRAD_H
 
 #include <string>
+#include "SpatialaudioAPI.h"
 #include "AmbisonicBase.h"
 #include "BFormat.h"
 #include "AmbisonicOptimFilters.h"
@@ -28,7 +29,7 @@ namespace spaudio {
 
     /** This is an AllRAD decoder for ITU BS.2051-3 layouts (and some extra ones). */
 
-    class AmbisonicAllRAD : public AmbisonicBase
+    class SPAUDIO_API AmbisonicAllRAD : public AmbisonicBase
     {
     public:
         AmbisonicAllRAD();

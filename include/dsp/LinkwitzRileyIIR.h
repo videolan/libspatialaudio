@@ -13,6 +13,7 @@
 
 #pragma once
 
+#include "../SpatialaudioAPI.h"
 #include "IIRFilter.h"
 #include <vector>
 
@@ -20,7 +21,7 @@ namespace spaudio {
 
     /** A simple 4th-order Linkwitz-Riley filter to low- and high-pass a signal. The outputs sum to have flat magnitude response.
     */
-    class LinkwitzRileyIIR
+    class SPAUDIO_API LinkwitzRileyIIR
     {
     public:
         LinkwitzRileyIIR();

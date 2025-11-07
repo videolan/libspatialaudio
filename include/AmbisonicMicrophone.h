@@ -16,6 +16,7 @@
 #ifndef _AMBISONIC_MICROPHONE_H
 #define _AMBISONIC_MICROPHONE_H
 
+#include "SpatialaudioAPI.h"
 #include "AmbisonicSource.h"
 #include "BFormat.h"
 
@@ -26,7 +27,7 @@ namespace spaudio {
     /** This is a microphone class. It is similar to ::AmbisonicSpeaker, with the
         addition of having directivity control. */
 
-    class AmbisonicMicrophone : public AmbisonicSource
+    class SPAUDIO_API AmbisonicMicrophone : public AmbisonicSource
     {
     public:
         AmbisonicMicrophone();
