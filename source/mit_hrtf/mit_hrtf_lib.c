@@ -12,9 +12,9 @@
 /*#                                                                          #*/
 /*############################################################################*/
 
-#include "config.h"
+#include "SpatialaudioConfig.h"
 
-#ifdef HAVE_MIT_HRTF
+#if SPATIALAUDIO_SUPPORTS_MIT_HRTF
 
 #include "mit_hrtf_lib.h"
 #include "normal/mit_hrtf_normal_44100.h"

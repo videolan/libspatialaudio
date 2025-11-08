@@ -1,6 +1,6 @@
-#include "config.h"
+#include "SpatialaudioConfig.h"
 
-#ifdef HAVE_MIT_HRTF
+#if SPATIALAUDIO_SUPPORTS_MIT_HRTF
 
 #include <AmbisonicCommons.h>
 

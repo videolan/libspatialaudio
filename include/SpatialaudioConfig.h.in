@@ -1,0 +1,30 @@
+/*############################################################################*/
+/*#                                                                          #*/
+/*#  Config information about the libspatialaudio build                      #*/
+/*#                                                                          #*/
+/*#  Author(s):     Marvin Scholz                                            #*/
+/*#  Licence:       LGPL + proprietary                                       #*/
+/*#                                                                          #*/
+/*############################################################################*/
+
+#ifndef SPATIALAUDIO_CONFIG_H
+#define SPATIALAUDIO_CONFIG_H
+
+// True if libspatialaudio was built with libmysofa support
+#cmakedefine01 SPATIALAUDIO_SUPPORTS_SOFA
+
+// True if libspatialaudio was built with the integrated MIT HRTF
+#cmakedefine01 SPATIALAUDIO_SUPPORTS_MIT_HRTF
+
+// Defined if libspatialaudio was built statically
+//
+// This is merely a hint, as both the shared and
+// static library could be built, in which case this
+// would be unset and is expected to be set correctly
+// by library consumers as only there it can be known
+// against which library is linked.
+#ifndef SPATIALAUDIO_STATIC
+#cmakedefine SPATIALAUDIO_STATIC
+#endif
+
+#endif /* SPATIALAUDIO_CONFIG_H */

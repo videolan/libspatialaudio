@@ -14,7 +14,7 @@
 /*############################################################################*/
 
 
-#include "config.h"
+#include "SpatialaudioConfig.h"
 
 #include <iostream>
 
@@ -385,15 +385,15 @@ namespace spaudio {
     {
         HRTF* p_hrtf;
 
-#ifdef HAVE_MYSOFA
-# ifdef HAVE_MIT_HRTF
+#if SPATIALAUDIO_SUPPORTS_SOFA
+# if SPATIALAUDIO_SUPPORTS_MIT_HRTF
         if (HRTFPath == "")
             p_hrtf = new MIT_HRTF(nSampleRate);
         else
 # endif
             p_hrtf = new SOFA_HRTF(HRTFPath, nSampleRate);
 #else
-# ifdef HAVE_MIT_HRTF
+# if SPATIALAUDIO_SUPPORTS_MIT_HRTF
         p_hrtf = new MIT_HRTF(nSampleRate);
         (void)HRTFPath;
 # else

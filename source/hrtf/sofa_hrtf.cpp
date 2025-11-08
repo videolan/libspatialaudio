@@ -3,7 +3,7 @@
 
 #include "hrtf/sofa_hrtf.h"
 
-#ifdef HAVE_MYSOFA
+#if SPATIALAUDIO_SUPPORTS_SOFA
 
 #include <cmath>
 #include <AmbisonicCommons.h>

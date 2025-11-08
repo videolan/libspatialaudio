@@ -61,3 +61,5 @@
 - CMake: Removed the `BUILD_STATIC_LIBS` option. Use the `BUILD_SHARED_LIBS`
   option to control if share or static libraries should be built. If both are
   needed, build twice explicitly.
+- The `config.h` header file was removed in favor of `SpatialaudioConfig.h` with
+  properly prefixed defines to prevent name clashes.

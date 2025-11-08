@@ -10,6 +10,8 @@
 #ifndef SPATIALAUDIO_API_H
 #define SPATIALAUDIO_API_H
 
+#include "SpatialaudioConfig.h"
+
 #if defined(__GNUC__) && (__GNUC__ >= 4)
 // GCC/Clang symbol visibility
 # define SPATIALAUDIO_EXPORT __attribute__((__visibility__("default")))

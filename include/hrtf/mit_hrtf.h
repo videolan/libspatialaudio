@@ -3,7 +3,7 @@
 
 #include "hrtf.h"
 
-#ifdef HAVE_MIT_HRTF
+#if SPATIALAUDIO_SUPPORTS_MIT_HRTF
 
 namespace spaudio {
 

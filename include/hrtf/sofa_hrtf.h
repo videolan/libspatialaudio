@@ -1,15 +1,13 @@
 #ifndef SOFA_HRTF_H
 #define SOFA_HRTF_H
 
-#include "config.h"
+#include "hrtf.h"
 
-#ifdef HAVE_MYSOFA
+#if SPATIALAUDIO_SUPPORTS_SOFA
 
 #include <string>
 
 #include <mysofa.h>
-
-#include "hrtf.h"
 
 namespace spaudio {
 

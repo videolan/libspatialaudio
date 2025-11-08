@@ -15,13 +15,17 @@ conf_data = configuration_data()
 
 libmysofa_dep = dependency('libmysofa', required : get_option('libmysofa'))
 if libmysofa_dep.found()
-    conf_data.set('HAVE_MYSOFA', 1)
+    conf_data.set('SPATIALAUDIO_SUPPORTS_SOFA', 1)
     dependencies += libmysofa_dep
 endif
 
 if get_option('mit_hrtf').allowed()
-    conf_data.set('HAVE_MIT_HRTF', 1)
+    conf_data.set('SPATIALAUDIO_SUPPORTS_MIT_HRTF', 1)
     add_languages('c', native: false)
+endif
+
+if get_option('default_library') == 'static'
+    conf_data.set('SPATIALAUDIO_STATIC', 1)
 endif
 
 subdir('include')

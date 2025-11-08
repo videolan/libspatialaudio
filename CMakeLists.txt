@@ -17,7 +17,6 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
 
 # Dependencies
 find_package(MySofa QUIET)
-set(HAVE_MYSOFA ${MYSOFA_FOUND})
 
 # Spatialaudio library
 add_library(spatialaudio)
@@ -130,9 +129,32 @@ target_sources(spatialaudio
             include/SpatialaudioAPI.h
 )
 
+# Generate config header
+set(SPATIALAUDIO_SUPPORTS_SOFA ${MYSOFA_FOUND})
+set(SPATIALAUDIO_SUPPORTS_MIT_HRTF ${HAVE_MIT_HRTF})
+if(NOT BUILD_SHARED_LIBS)
+    set(SPATIALAUDIO_STATIC YES)
+endif()
+
+message("Type: $<TARGET_PROPERTY:spatialaudio,TYPE>")
+
+configure_file(
+    "include/SpatialaudioConfig.h.in"
+    "include/SpatialaudioConfig.h"
+)
+
+target_sources(spatialaudio
+    PUBLIC
+        FILE_SET generated_headers
+        TYPE HEADERS
+        BASE_DIRS $<TARGET_PROPERTY:BINARY_DIR>/include
+        FILES
+            ${CMAKE_CURRENT_BINARY_DIR}/include/SpatialaudioConfig.h
+)
+
 target_include_directories(spatialaudio
     PRIVATE
-        ${CMAKE_CURRENT_BINARY_DIR}
+        ${CMAKE_CURRENT_BINARY_DIR}/include
 )
 target_compile_definitions(spatialaudio
     PRIVATE
@@ -149,11 +171,6 @@ if(MYSOFA_FOUND)
 endif(MYSOFA_FOUND)
 
 configure_file(
-    "${CMAKE_CURRENT_SOURCE_DIR}/include/config.h.in"
-    "${CMAKE_CURRENT_BINARY_DIR}/config.h"
-)
-
-configure_file(
     "${CMAKE_CURRENT_SOURCE_DIR}/cmake/spatialaudio.pc.cmake"
     "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}.pc"
     @ONLY
@@ -163,6 +180,8 @@ install(TARGETS spatialaudio
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
     FILE_SET HEADERS
+        DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/spatialaudio
+    FILE_SET generated_headers
         DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/spatialaudio
 )
 install(FILES "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}.pc"

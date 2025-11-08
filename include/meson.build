@@ -1,6 +1,8 @@
 config_h = configure_file(
-    output : 'config.h',
-    configuration : conf_data
+    input : 'SpatialaudioConfig.h.in',
+    output : 'SpatialaudioConfig.h',
+    configuration : conf_data,
+    format :  'cmake',
 )
 
 # Public header files that are installed
