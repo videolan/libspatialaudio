@@ -41,13 +41,18 @@ spatialaudio_sources = files(
 
 spatialaudio_clike_args = ['-DSPATIALAUDIO_COMPILATION']
 
+# Extract version info from header
+spatialaudio_api_version = cpp.get_define('SPATIALAUDIO_API_VERSION_STRING',
+    prefix : '#include "SpatialaudioVersion.h"',
+    include_directories : spatialaudio_incdirs).strip().strip('"')
+
 spatialaudio_lib = library(
     'spatialaudio',
     spatialaudio_sources,
     install : true,
     dependencies : dependencies,
     include_directories : spatialaudio_incdirs,
-    version : spatialaudio_lib_version,
+    version : spatialaudio_api_version,
     gnu_symbol_visibility : 'hidden',
     c_args : spatialaudio_clike_args,
     cpp_args : spatialaudio_clike_args,
