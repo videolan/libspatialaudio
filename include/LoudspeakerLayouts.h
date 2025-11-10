@@ -12,8 +12,8 @@
 /*#                                                                          #*/
 /*############################################################################*/
 
-
-#pragma once
+#ifndef SPATIALAUDIO_LOUDSPEAKER_LAYOUTS_H
+#define SPATIALAUDIO_LOUDSPEAKER_LAYOUTS_H
 
 #include <string>
 #include <vector>
@@ -587,3 +587,5 @@ namespace spaudio {
     }
 
 } // namespace spaudio
+
+#endif // SPATIALAUDIO_LOUDSPEAKER_LAYOUTS_H

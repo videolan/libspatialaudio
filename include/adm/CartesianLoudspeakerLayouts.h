@@ -12,7 +12,8 @@
 /*#                                                                          #*/
 /*############################################################################*/
 
-#pragma once
+#ifndef SPATIALAUDIO_ADM_CARTESIAN_LOUDSPEAKER_LAYOUTS_H
+#define SPATIALAUDIO_ADM_CARTESIAN_LOUDSPEAKER_LAYOUTS_H
 
 namespace spaudio {
     namespace adm {
@@ -200,3 +201,5 @@ namespace spaudio {
 
     }//namespace adm
 } // namespace spaudio
+
+#endif // SPATIALAUDIO_ADM_CARTESIAN_LOUDSPEAKER_LAYOUTS_H

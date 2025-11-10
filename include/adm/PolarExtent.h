@@ -10,7 +10,8 @@
 /*#                                                                          #*/
 /*############################################################################*/
 
-#pragma once
+#ifndef SPATIALAUDIO_ADM_POLAR_EXTENT_H
+#define SPATIALAUDIO_ADM_POLAR_EXTENT_H
 
 #include "../SpatialaudioAPI.h"
 #include "../Coordinates.h"
@@ -152,3 +153,5 @@ namespace spaudio {
 
     } // namespace adm
 } // namespace spaudio
+
+#endif // SPATIALAUDIO_ADM_POLAR_EXTENT_H

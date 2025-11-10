@@ -11,7 +11,8 @@
 /*#                                                                          #*/
 /*############################################################################*/
 
-#pragma once
+#ifndef SPATIALAUDIO_REGION_HANDLERS_H
+#define SPATIALAUDIO_REGION_HANDLERS_H
 
 #include "Tools.h"
 #include "SpatialaudioAPI.h"
@@ -144,3 +145,5 @@ namespace spaudio {
     };
 
 } // namespace spaudio
+
+#endif // SPATIALAUDIO_REGION_HANDLERS_H

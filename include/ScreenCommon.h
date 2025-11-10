@@ -11,7 +11,8 @@
 /*#                                                                          #*/
 /*############################################################################*/
 
-#pragma once
+#ifndef SPATIALAUDIO_SCREEN_COMMON_H
+#define SPATIALAUDIO_SCREEN_COMMON_H
 
 #include "Coordinates.h"
 #include "Tools.h"
@@ -91,3 +92,5 @@ namespace spaudio {
     };
 
 } // namespace spaudio
+
+#endif // SPATIALAUDIO_SCREEN_COMMON_H

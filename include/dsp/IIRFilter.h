@@ -11,7 +11,8 @@
 /*#                                                                          #*/
 /*############################################################################*/
 
-#pragma once
+#ifndef SPATIALAUDIO_DSP_IIR_FILTER_H
+#define SPATIALAUDIO_DSP_IIR_FILTER_H
 
 #include <vector>
 
@@ -73,3 +74,5 @@ namespace spaudio {
     };
 
 } // namespace spaudio
+
+#endif // SPATIALAUDIO_DSP_IIR_FILTER_H

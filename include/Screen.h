@@ -11,7 +11,8 @@
 /*#                                                                          #*/
 /*############################################################################*/
 
-#pragma once
+#ifndef SPATIALAUDIO_SCREEN_H
+#define SPATIALAUDIO_SCREEN_H
 
 #include "SpatialaudioAPI.h"
 #include "adm/Conversions.h"
@@ -90,3 +91,5 @@ namespace spaudio {
     };
 
 } // namespace spaudio
+
+#endif // SPATIALAUDIO_SCREEN_H

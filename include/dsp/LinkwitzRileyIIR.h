@@ -11,7 +11,8 @@
 /*#                                                                          #*/
 /*############################################################################*/
 
-#pragma once
+#ifndef SPATIALAUDIO_DSP_LINKWITZ_RILEY_IIR_H
+#define SPATIALAUDIO_DSP_LINKWITZ_RILEY_IIR_H
 
 #include "../SpatialaudioAPI.h"
 #include "IIRFilter.h"
@@ -53,3 +54,5 @@ namespace spaudio {
     };
 
 } // namespace spaudio
+
+#endif // SPATIALAUDIO_DSP_LINKWITZ_RILEY_IIR_H

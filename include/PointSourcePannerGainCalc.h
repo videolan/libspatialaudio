@@ -12,7 +12,8 @@
 /*#                                                                          #*/
 /*############################################################################*/
 
-#pragma once
+#ifndef SPATIALAUDIO_POINT_SOURCE_PANNER_GAIN_CALC_H
+#define SPATIALAUDIO_POINT_SOURCE_PANNER_GAIN_CALC_H
 
 #include "SpatialaudioAPI.h"
 #include "LoudspeakerLayouts.h"
@@ -104,3 +105,5 @@ namespace spaudio {
     };
 
 } // namespace spaudio
+
+#endif // SPATIALAUDIO_POINT_SOURCE_PANNER_GAIN_CALC_H

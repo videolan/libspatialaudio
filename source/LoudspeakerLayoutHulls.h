@@ -12,7 +12,8 @@
 /*#                                                                          #*/
 /*############################################################################*/
 
-#pragma once
+#ifndef SPATIALAUDIO_LOUDSPEAKER_LAYOUT_HULLS_H
+#define SPATIALAUDIO_LOUDSPEAKER_LAYOUT_HULLS_H
 
 #include <vector>
 
@@ -164,3 +165,5 @@ namespace spaudio {
     {3, 7, 18, 14},{3, 14, 16, 8} };
 
 }
+
+#endif // SPATIALAUDIO_LOUDSPEAKER_LAYOUT_HULLS_H

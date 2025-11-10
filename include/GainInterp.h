@@ -10,7 +10,8 @@
 /*#                                                                          #*/
 /*############################################################################*/
 
-#pragma once
+#ifndef SPATIALAUDIO_GAIN_INTERP_H
+#define SPATIALAUDIO_GAIN_INTERP_H
 
 #include <vector>
 #include "SpatialaudioAPI.h"
@@ -81,3 +82,5 @@ namespace spaudio {
     };
 
 } // namespace spaudio
+
+#endif // SPATIALAUDIO_GAIN_INTERP_H

@@ -11,7 +11,8 @@
 /*#                                                                          #*/
 /*############################################################################*/
 
-#pragma once
+#ifndef SPATIALAUDIO_COORDINATES_H
+#define SPATIALAUDIO_COORDINATES_H
 
 namespace spaudio {
 
@@ -54,3 +55,5 @@ namespace spaudio {
     }
 
 } // namespace spaudio
+
+#endif // SPATIALAUDIO_COORDINATES_H

@@ -10,7 +10,8 @@
 /*#                                                                          #*/
 /*############################################################################*/
 
-#pragma once
+#ifndef SPATIALAUDIO_DECORRELATOR_H
+#define SPATIALAUDIO_DECORRELATOR_H
 
 #include "SpatialaudioAPI.h"
 #include "LoudspeakerLayouts.h"
@@ -117,3 +118,5 @@ namespace spaudio {
     };
 
 } // namespace spaudio
+
+#endif // SPATIALAUDIO_DECORRELATOR_H

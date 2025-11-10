@@ -14,7 +14,8 @@
 
 #include <cmath>
 
-#pragma once
+#ifndef SPATIALAUDIO_ADM_MAPPING_RULES_H
+#define SPATIALAUDIO_ADM_MAPPING_RULES_H
 
 namespace spaudio {
     namespace adm {
@@ -168,3 +169,5 @@ namespace spaudio {
 
     } // namespace adm
 } // namespace spaudio
+
+#endif // SPATIALAUDIO_ADM_MAPPING_RULES_H

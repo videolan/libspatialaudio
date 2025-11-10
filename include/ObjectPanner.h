@@ -11,8 +11,8 @@
 /*#                                                                          #*/
 /*############################################################################*/
 
-
-#pragma once
+#ifndef SPATIALAUDIO_OBJECT_PANNER_H
+#define SPATIALAUDIO_OBJECT_PANNER_H
 
 #include <memory>
 
@@ -94,3 +94,5 @@ namespace spaudio {
     };
 
 } // namespace spaudio
+
+#endif // SPATIALAUDIO_OBJECT_PANNER_H

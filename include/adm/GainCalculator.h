@@ -10,7 +10,8 @@
 /*#                                                                          #*/
 /*############################################################################*/
 
-#pragma once
+#ifndef SPATIALAUDIO_ADM_GAIN_CALCULATOR_H
+#define SPATIALAUDIO_ADM_GAIN_CALCULATOR_H
 
 #include "../SpatialaudioAPI.h"
 #include "../Coordinates.h"
@@ -213,3 +214,5 @@ namespace spaudio {
 
     } // namespace adm
 } // namespace spaudio
+
+#endif // SPATIALAUDIO_ADM_GAIN_CALCULATOR_H

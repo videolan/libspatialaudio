@@ -12,7 +12,8 @@
 /*#                                                                          #*/
 /*############################################################################*/
 
-#pragma once
+#ifndef SPATIALAUDIO_TOOLS_H
+#define SPATIALAUDIO_TOOLS_H
 
 #define _USE_MATH_DEFINES
 #include<math.h>
@@ -523,3 +524,5 @@ namespace spaudio {
     }
 
 } // namespace spaudio
+
+#endif // SPATIALAUDIO_TOOLS_H

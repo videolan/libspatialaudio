@@ -12,7 +12,8 @@
 /*#                                                                          #*/
 /*############################################################################*/
 
-#pragma once
+#ifndef SPATIALAUDIO_ADM_DIRECT_SPEAKER_GAIN_CALC_H
+#define SPATIALAUDIO_ADM_DIRECT_SPEAKER_GAIN_CALC_H
 
 #include "../SpatialaudioAPI.h"
 #include "../RendererMetadata.h"
@@ -73,3 +74,5 @@ namespace spaudio {
 
     } // namespace adm
 } // namespace spaudio
+
+#endif // SPATIALAUDIO_ADM_DIRECT_SPEAKER_GAIN_CALC_H

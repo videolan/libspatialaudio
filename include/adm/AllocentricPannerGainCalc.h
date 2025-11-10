@@ -11,7 +11,8 @@
 /*#                                                                          #*/
 /*############################################################################*/
 
-#pragma once
+#ifndef SPATIALAUDIO_ADM_ALLOCENTRIC_PANNER_GAIN_CALC_H
+#define SPATIALAUDIO_ADM_ALLOCENTRIC_PANNER_GAIN_CALC_H
 
 #include "../SpatialaudioAPI.h"
 #include "../LoudspeakerLayouts.h"
@@ -78,3 +79,5 @@ namespace spaudio {
 
     } // namespace adm
 } // namespace spaudio
+
+#endif // SPATIALAUDIO_ADM_ALLOCENTRIC_PANNER_GAIN_CALC_H

@@ -12,7 +12,8 @@
 /*#                                                                          #*/
 /*############################################################################*/
 
-#pragma once
+#ifndef SPATIALAUDIO_RENDERER_METADATA_H
+#define SPATIALAUDIO_RENDERER_METADATA_H
 
 #include <vector>
 #include <string>
@@ -489,3 +490,5 @@ namespace spaudio {
     };
 
 } // namespace spaudio
+
+#endif // SPATIALAUDIO_RENDERER_METADATA_H

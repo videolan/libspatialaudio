@@ -11,7 +11,8 @@
 /*#                                                                          #*/
 /*############################################################################*/
 
-#pragma once
+#ifndef SPATIALAUDIO_ADM_CONVERSIONS_H
+#define SPATIALAUDIO_ADM_CONVERSIONS_H
 
 #include "../Tools.h"
 #include "../RendererMetadata.h"
@@ -482,3 +483,5 @@ namespace spaudio {
         }
     } // namespace adm
 } // namespace spaudio
+
+#endif // SPATIALAUDIO_ADM_CONVERSIONS_H
