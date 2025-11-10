@@ -1,5 +1,5 @@
-#ifndef BINAURALIZER_H
-#define BINAURALIZER_H
+#ifndef SPATIALAUDIO_BINAURALIZER_H
+#define SPATIALAUDIO_BINAURALIZER_H
 
 #include <vector>
 
@@ -59,4 +59,4 @@ namespace spaudio {
 
 } // namespace spaudio
 
-#endif // BINAURALIZER_H
+#endif // SPATIALAUDIO_BINAURALIZER_H

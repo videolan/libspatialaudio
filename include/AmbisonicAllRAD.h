@@ -13,8 +13,8 @@
 /*############################################################################*/
 
 
-#ifndef _AMBISONIC_ALLRAD_H
-#define _AMBISONIC_ALLRAD_H
+#ifndef SPATIALAUDIO_AMBISONIC_ALLRAD_H
+#define SPATIALAUDIO_AMBISONIC_ALLRAD_H
 
 #include <string>
 #include "SpatialaudioAPI.h"
@@ -97,4 +97,4 @@ namespace spaudio {
     };
 } // namespace spaudio
 
-#endif // _AMBISONIC_ALLRAD_H
+#endif // SPATIALAUDIO_AMBISONIC_ALLRAD_H

@@ -1,5 +1,5 @@
-#ifndef HRTF_H
-#define HRTF_H
+#ifndef SPATIALAUDIO_HRTF_HRTF_H
+#define SPATIALAUDIO_HRTF_HRTF_H
 
 #include "../SpatialaudioAPI.h"
 
@@ -26,4 +26,4 @@ namespace spaudio {
 
 } // namespace spaudio
 
-#endif // HRTF_H
+#endif // SPATIALAUDIO_HRTF_HRTF_H

@@ -13,8 +13,8 @@
 /*############################################################################*/
 
 
-#ifndef _AMBISONIC_ENCODER_H
-#define _AMBISONIC_ENCODER_H
+#ifndef SPATIALAUDIO_AMBISONIC_ENCODER_H
+#define SPATIALAUDIO_AMBISONIC_ENCODER_H
 
 #include "SpatialaudioAPI.h"
 #include "AmbisonicSource.h"
@@ -91,4 +91,4 @@ namespace spaudio {
 
 } // namespace spaudio
 
-#endif // _AMBISONIC_ENCODER_H
+#endif // SPATIALAUDIO_AMBISONIC_ENCODER_H

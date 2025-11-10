@@ -13,8 +13,8 @@
 /*############################################################################*/
 
 
-#ifndef _AMBISONICCOMMONS_H
-#define    _AMBISONICCOMMONS_H
+#ifndef SPATIALAUDIO_AMBISONIC_COMMONS_H
+#define SPATIALAUDIO_AMBISONIC_COMMONS_H
 
 #define _USE_MATH_DEFINES
 #include <math.h>
@@ -143,4 +143,4 @@ namespace spaudio {
 
 } // namespace spaudio
 
-#endif //_AMBISONICCOMMONS_H
+#endif // SPATIALAUDIO_AMBISONIC_COMMONS_H

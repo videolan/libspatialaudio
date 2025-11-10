@@ -14,8 +14,8 @@
 /*############################################################################*/
 
 
-#ifndef _AMBISONIC_SOURCE_H
-#define _AMBISONIC_SOURCE_H
+#ifndef SPATIALAUDIO_AMBISONIC_SOURCE_H
+#define SPATIALAUDIO_AMBISONIC_SOURCE_H
 
 #include "SpatialaudioAPI.h"
 #include "AmbisonicBase.h"
@@ -117,4 +117,4 @@ namespace spaudio {
 
 } // namespace spaudio
 
-#endif // _AMBISONIC_SOURCE_H
+#endif // SPATIALAUDIO_AMBISONIC_SOURCE_H

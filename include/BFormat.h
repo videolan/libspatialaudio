@@ -13,8 +13,8 @@
 /*############################################################################*/
 
 
-#ifndef _BFORMAT_H
-#define _BFORMAT_H
+#ifndef SPATIALAUDIO_BFORMAT_H
+#define SPATIALAUDIO_BFORMAT_H
 
 #include "SpatialaudioAPI.h"
 #include "AmbisonicBase.h"
@@ -133,4 +133,4 @@ namespace spaudio {
 
 } // namespace spaudio
 
-#endif //_BFORMAT_H
+#endif // SPATIALAUDIO_BFORMAT_H

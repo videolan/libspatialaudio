@@ -12,8 +12,8 @@
 /*############################################################################*/
 
 
-#ifndef _AMBISONICS_H
-#define _AMBISONICS_H
+#ifndef SPATIALAUDIO_AMBISONICS_H
+#define SPATIALAUDIO_AMBISONICS_H
 
 #include "AmbisonicCommons.h"
 #include "AmbisonicBase.h"
@@ -31,4 +31,4 @@
 #include "AmbisonicShelfFilters.h"
 #include "AmbisonicAllRAD.h"
 
-#endif //_AMBISONICS_H
+#endif // SPATIALAUDIO_AMBISONICS_H

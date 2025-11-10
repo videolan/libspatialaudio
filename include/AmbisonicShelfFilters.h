@@ -13,8 +13,8 @@
 /*############################################################################*/
 
 
-#ifndef _AMBISONIC_SHELF_FILTERS_H
-#define    _AMBISONIC_SHELF_FILTERS_H
+#ifndef SPATIALAUDIO_AMBISONIC_SHELF_FILTERS_H
+#define SPATIALAUDIO_AMBISONIC_SHELF_FILTERS_H
 
 #include "SpatialaudioAPI.h"
 #include "AmbisonicBase.h"
@@ -80,4 +80,4 @@ namespace spaudio {
 
 } // namespace spaudio
 
-#endif // _AMBISONIC_SHELF_FILTERS_H
+#endif // SPATIALAUDIO_AMBISONIC_SHELF_FILTERS_H

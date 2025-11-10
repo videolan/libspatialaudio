@@ -1,5 +1,5 @@
-#ifndef MIT_HRTF_H
-#define MIT_HRTF_H
+#ifndef SPATIALAUDIO_HRTF_MIT_HRTF_H
+#define SPATIALAUDIO_HRTF_MIT_HRTF_H
 
 #include "hrtf.h"
 
@@ -18,4 +18,4 @@ namespace spaudio {
 
 #endif
 
-#endif // MIT_HRTF_H
+#endif // SPATIALAUDIO_HRTF_MIT_HRTF_H

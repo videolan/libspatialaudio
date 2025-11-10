@@ -14,8 +14,8 @@
 /*############################################################################*/
 
 
-#ifndef _AMBISONIC_BINAURALIZER_H
-#define _AMBISONIC_BINAURALIZER_H
+#ifndef SPATIALAUDIO_AMBISONIC_BINAURALIZER_H
+#define SPATIALAUDIO_AMBISONIC_BINAURALIZER_H
 
 #include <string>
 #include <vector>
@@ -114,4 +114,4 @@ namespace spaudio {
 
 } // namespace spaudio
 
-#endif // _AMBISONIC_BINAURALIZER_H
+#endif // SPATIALAUDIO_AMBISONIC_BINAURALIZER_H

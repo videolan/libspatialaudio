@@ -14,8 +14,8 @@
 /*############################################################################*/
 
 
-#ifndef _AMBISONIC_ZOOMER_H
-#define _AMBISONIC_ZOOMER_H
+#ifndef SPATIALAUDIO_AMBISONIC_ZOOMER_H
+#define SPATIALAUDIO_AMBISONIC_ZOOMER_H
 
 #include "SpatialaudioAPI.h"
 #include "AmbisonicBase.h"
@@ -93,4 +93,4 @@ namespace spaudio {
 
 } // namespace spaudio
 
-#endif // _AMBISONIC_ZOOMER_H
+#endif // SPATIALAUDIO_AMBISONIC_ZOOMER_H

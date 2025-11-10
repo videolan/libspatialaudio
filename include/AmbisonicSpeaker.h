@@ -13,8 +13,8 @@
 /*############################################################################*/
 
 
-#ifndef _AMBISONIC_SPEAKER_H
-#define _AMBISONIC_SPEAKER_H
+#ifndef SPATIALAUDIO_AMBISONIC_SPEAKER_H
+#define SPATIALAUDIO_AMBISONIC_SPEAKER_H
 
 #include "SpatialaudioAPI.h"
 #include "AmbisonicSource.h"
@@ -55,4 +55,4 @@ namespace spaudio {
 
 } // namespace spaudio
 
-#endif // _AMBISONIC_SPEAKER_H
+#endif // SPATIALAUDIO_AMBISONIC_SPEAKER_H

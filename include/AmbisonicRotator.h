@@ -13,8 +13,8 @@
 /*############################################################################*/
 
 
-#ifndef _AMBISONIC_ROTATOR_H
-#define    _AMBISONIC_ROTATOR_H
+#ifndef SPATIALAUDIO_AMBISONIC_ROTATOR_H
+#define SPATIALAUDIO_AMBISONIC_ROTATOR_H
 
 #include "SpatialaudioAPI.h"
 #include "AmbisonicBase.h"
@@ -149,4 +149,4 @@ namespace spaudio {
 
 } // namespace spaudio
 
-#endif // _AMBISONIC_ROTATOR_H
+#endif // SPATIALAUDIO_AMBISONIC_ROTATOR_H

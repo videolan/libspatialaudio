@@ -1,5 +1,5 @@
-#ifndef SOFA_HRTF_H
-#define SOFA_HRTF_H
+#ifndef SPATIALAUDIO_HRTF_SOFA_HRTF_H
+#define SPATIALAUDIO_HRTF_SOFA_HRTF_H
 
 #include "hrtf.h"
 
@@ -29,4 +29,4 @@ namespace spaudio {
 
 #endif
 
-#endif // SOFA_HRTF_H
+#endif // SPATIALAUDIO_HRTF_SOFA_HRTF_H
