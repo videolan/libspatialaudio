@@ -1,11 +1,5 @@
 cmake_minimum_required(VERSION 3.23)
 
-# ABI version
-# Do not forget to increase the major version when breaking ABI!
-set(LIBRARY_SOVERSION_MAJOR "2")
-set(LIBRARY_SOVERSION_MINOR "0")
-set(LIBRARY_SOVERSION_PATCH "0")
-
 project(spatialaudio VERSION 0.4.0)
 
 # Options
@@ -18,6 +12,23 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
 # Dependencies
 find_package(MySofa QUIET)
 
+# Get API version from header
+file(READ "include/SpatialaudioVersion.h" SPAUDIO_VER_HEADER)
+foreach(VERPART "MAJOR" "MINOR" "PATCH")
+    if(SPAUDIO_VER_HEADER MATCHES "#define SPATIALAUDIO_API_VERSION_${VERPART} ([0-9]+)")
+        set("SPAUDIO_API_${VERPART}" ${CMAKE_MATCH_1})
+    else()
+        message(FATAL_ERROR "Unable to get SPATIALAUDIO_API_VERSION_${VERPART}")
+    endif()
+endforeach()
+
+set(SPAUDIO_API "${SPAUDIO_API_MAJOR}.${SPAUDIO_API_MINOR}.${SPAUDIO_API_PATCH}")
+message(STATUS
+    "libspatialaudio API version ${SPAUDIO_API}")
+
+set_property(DIRECTORY APPEND PROPERTY
+    CMAKE_CONFIGURE_DEPENDS "include/SpatialaudioVersion.h")
+
 # Spatialaudio library
 add_library(spatialaudio)
 add_library(Spatialaudio::spatialaudio ALIAS spatialaudio)
@@ -25,8 +36,8 @@ set_target_properties(spatialaudio
     PROPERTIES
         OUTPUT_NAME spatialaudio
         POSITION_INDEPENDENT_CODE ON
-        VERSION "${LIBRARY_SOVERSION_MAJOR}.${LIBRARY_SOVERSION_MINOR}.${LIBRARY_SOVERSION_PATCH}"
-        SOVERSION ${LIBRARY_SOVERSION_MAJOR}
+        VERSION "${SPAUDIO_API}"
+        SOVERSION ${SPAUDIO_API_MAJOR}
         C_VISIBILITY_PRESET hidden
         CXX_VISIBILITY_PRESET hidden
 )
