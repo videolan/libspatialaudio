@@ -25,7 +25,6 @@ spatialaudio_headers = [files(
     'AmbisonicEncoder.h',
     'AmbisonicMicrophone.h',
     'AmbisonicProcessor.h',
-    'AmbisonicPsychoacousticFilters.h',
     'AmbisonicRotator.h',
     'Ambisonics.h',
     'AmbisonicShelfFilters.h',

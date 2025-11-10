@@ -14,6 +14,7 @@
 
 
 #include "AmbisonicShelfFilters.h"
+#include "AmbisonicPsychoacousticFilters.h"
 #include <iostream>
 
 namespace spaudio {

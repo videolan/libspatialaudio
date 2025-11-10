@@ -96,7 +96,6 @@ target_sources(spatialaudio
             include/AmbisonicEncoder.h
             include/AmbisonicMicrophone.h
             include/AmbisonicProcessor.h
-            include/AmbisonicPsychoacousticFilters.h
             include/AmbisonicRotator.h
             include/Ambisonics.h
             include/AmbisonicShelfFilters.h
