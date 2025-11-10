@@ -8,7 +8,7 @@ config_h = configure_file(
 # Public header files that are installed
 spatialaudio_headers = [files(
     'adm/Conversions.h',
-    'adm/DirectSpeakerGainCalc.h',
+    'adm/DirectSpeakersGainCalc.h',
     'adm/MappingRules.h',
     'RendererMetadata.h',
     'Renderer.h',

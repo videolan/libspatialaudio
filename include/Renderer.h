@@ -24,7 +24,7 @@
 #include "Tools.h"
 #include "adm/Conversions.h"
 #include "GainInterp.h"
-#include "adm/DirectSpeakerGainCalc.h"
+#include "adm/DirectSpeakersGainCalc.h"
 #include "Decorrelator.h"
 #include "adm/GainCalculator.h"
 

@@ -67,7 +67,7 @@ target_sources(spatialaudio
         source/AmbisonicEncoderDist.cpp
         source/AmbisonicZoomer.cpp
         source/Decorrelator.cpp
-        source/adm/DirectSpeakerGainCalc.cpp
+        source/adm/DirectSpeakersGainCalc.cpp
         source/Renderer.cpp
         source/adm/AllocentricPannerGainCalc.cpp
         source/adm/AllocentricExtent.cpp
@@ -92,7 +92,7 @@ target_sources(spatialaudio
             include/adm/Conversions.h
             include/adm/MappingRules.h
             include/adm/CartesianLoudspeakerLayouts.h
-            include/adm/DirectSpeakerGainCalc.h
+            include/adm/DirectSpeakersGainCalc.h
             include/RendererMetadata.h
             include/Renderer.h
             include/adm/AllocentricPannerGainCalc.h

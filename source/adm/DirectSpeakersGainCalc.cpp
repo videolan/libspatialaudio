@@ -12,7 +12,7 @@
 /*#                                                                          #*/
 /*############################################################################*/
 
-#include "adm/DirectSpeakerGainCalc.h"
+#include "adm/DirectSpeakersGainCalc.h"
 #include<string>
 #include <map>
 
