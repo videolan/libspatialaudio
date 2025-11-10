@@ -26,8 +26,7 @@
 #include "AmbisonicEncoder.h"
 #include "kiss_fft/kiss_fftr.h"
 
-#include "hrtf/mit_hrtf.h"
-#include "hrtf/sofa_hrtf.h"
+#include "hrtf/hrtf.h"
 
 namespace spaudio {
 

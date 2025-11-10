@@ -19,6 +19,8 @@
 #include <iostream>
 
 #include "AmbisonicBinauralizer.h"
+#include "hrtf/mit_hrtf.h"
+#include "hrtf/sofa_hrtf.h"
 
 namespace spaudio {
 
