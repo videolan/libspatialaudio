@@ -136,8 +136,6 @@ if(NOT BUILD_SHARED_LIBS)
     set(SPATIALAUDIO_STATIC YES)
 endif()
 
-message("Type: $<TARGET_PROPERTY:spatialaudio,TYPE>")
-
 configure_file(
     "include/SpatialaudioConfig.h.in"
     "include/SpatialaudioConfig.h"
