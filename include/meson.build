@@ -56,6 +56,7 @@ spatialaudio_headers = [files(
     'dsp/IIRFilter.h',
     'dsp/LinkwitzRileyIIR.h',
     'SpatialaudioAPI.h',
+    'SpatialaudioVersion.h',
 ), config_h]
 
 spatialaudio_incdirs = include_directories('.')

@@ -127,6 +127,7 @@ target_sources(spatialaudio
             include/dsp/IIRFilter.h
             include/dsp/LinkwitzRileyIIR.h
             include/SpatialaudioAPI.h
+            include/SpatialaudioVersion.h
 )
 
 # Generate config header
