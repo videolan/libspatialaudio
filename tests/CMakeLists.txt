@@ -8,3 +8,4 @@ function(spaudio_add_test name)
 endfunction()
 
 spaudio_add_test(TestInsideAngleRange)
+spaudio_add_test(TestAmbisonicShelfFilters)
