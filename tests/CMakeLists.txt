@@ -9,3 +9,4 @@ endfunction()
 
 spaudio_add_test(TestInsideAngleRange)
 spaudio_add_test(TestAmbisonicShelfFilters)
+spaudio_add_test(TestAmbisonicDecoderPresets)
