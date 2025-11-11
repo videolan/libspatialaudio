@@ -111,7 +111,6 @@ target_sources(spatialaudio
             include/hrtf/mit_hrtf.h
             include/hrtf/sofa_hrtf.h
             include/LoudspeakerLayouts.h
-            include/LoudspeakerLayoutHulls.h
             include/PointSourcePannerGainCalc.h
             include/adm/PolarExtent.h
             include/RegionHandlers.h
