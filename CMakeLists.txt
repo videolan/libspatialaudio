@@ -91,7 +91,6 @@ target_sources(spatialaudio
             include/AmbisonicBinauralizer.h
             include/AmbisonicCommons.h
             include/AmbisonicDecoder.h
-            include/AmbisonicDecoderPresets.h
             include/AmbisonicEncoderDist.h
             include/AmbisonicEncoder.h
             include/AmbisonicMicrophone.h

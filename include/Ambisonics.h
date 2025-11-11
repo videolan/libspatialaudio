@@ -28,7 +28,6 @@
 #include "AmbisonicRotator.h"
 #include "AmbisonicBinauralizer.h"
 #include "AmbisonicZoomer.h"
-#include "AmbisonicDecoderPresets.h"
 #include "AmbisonicShelfFilters.h"
 #include "AmbisonicAllRAD.h"
 
