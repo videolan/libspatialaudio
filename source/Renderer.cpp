@@ -297,7 +297,7 @@ namespace spaudio {
 
         if (nObjectInd == -1) // this track was not declared at construction. Stopping here.
         {
-            std::cerr << "AdmRender Warning: Expected a track index that was declared an Object in construction. Input will not be rendered." << std::endl;
+            std::cerr << "Renderer Error: Expected a track index that was declared an Object in construction. Input will not be rendered." << std::endl;
             return;
         }
 
@@ -400,7 +400,7 @@ namespace spaudio {
 
         if (nObjectInd == -1) // this track was not declared at construction. Stopping here.
         {
-            std::cerr << "AdmRender Warning: Expected a track index that was declared an DirectSpeaker in construction. Input will not be rendered." << std::endl;
+            std::cerr << "Renderer Error: Expected a track index that was declared an DirectSpeaker in construction. Input will not be rendered." << std::endl;
             return;
         }
         int iDirSpk = m_channelToDirectSpeakerMap[nObjectInd];
