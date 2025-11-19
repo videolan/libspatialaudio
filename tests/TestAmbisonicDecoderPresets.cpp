@@ -29,6 +29,7 @@ int main() {
 	inputSignal.Configure(order, b3D, nSamples);
 	inputSignal.Reset();
 	std::array<float, nSamples> impulse;
+	impulse.fill(0.f);
 	impulse[0] = 1.f;
 
 	float** ldspkOut = new float* [nLdspk];
