@@ -45,12 +45,6 @@ namespace spaudio {
         }
         else
         {
-            // Fallback to a channel front centre
-            name = "Unknown";
-            this->channelType = ChannelTypes::FrontCentre;
-            polarPosition = bs2094::positions[static_cast<int>(ChannelTypes::FrontCentre)];
-            polarPositionNominal = polarPosition;
-            isLFE = false;
             throw std::runtime_error("Channel type not complete. Please add label and position");
         }
     }
@@ -78,12 +72,6 @@ namespace spaudio {
         }
         else
         {
-            // Fallback to a Custom channel at the front
-            channelType = ChannelTypes::Custom;
-            int fallbackIndex = static_cast<int>(ChannelTypes::FrontCentre);
-            polarPosition = bs2094::positions[fallbackIndex];
-            polarPositionNominal = bs2094::positions[fallbackIndex];
-            isLFE = false;
             throw std::runtime_error("Unknown channel: " + channelName);
         }
     }
@@ -193,12 +181,10 @@ namespace spaudio {
             layoutName = "2+3+0";
             break;
         case OutputLayout::Binaural:
-            throw std::runtime_error("Binaural is not a supported loudspeaker layout. Using stereo instead.");
-            layoutName = "0+2+0";
+            throw std::runtime_error("Binaural is not a supported loudspeaker layout.");
             break;
         default:
-            throw std::runtime_error("Layout is not in the list of presets! Please add it. Using stereo for now.");
-            layoutName = "0+2+0";
+            throw std::runtime_error("Layout is not in the list of presets! Please add it.");
             break;
         }
         *this = getMatchingLayout(layoutName);
