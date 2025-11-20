@@ -96,7 +96,7 @@ namespace spaudio {
         for (unsigned int iCh = 0; iCh < nCh; ++iCh)
         {
             float gain = static_cast<float>(m_targetGainVec[iCh]);
-            if (std::abs(gain - 1.f) <= 1e-5f) // If gain is almost 1 then don't process this channel
+            if (std::abs(gain) < 1e-5f)
                 continue;
 
             for (unsigned int i = nInterpSamples; i < nSamples; ++i)
