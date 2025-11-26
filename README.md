@@ -58,33 +58,42 @@ For those who do not need to know the background theory, most documentation page
 
 ## Building libspatialaudio
 
-To build **libspatialaudio**, follow these steps:
+Clone the repository (if you haven't already):
 
-1. Clone the repository (if you haven't already):
+```bash
+git clone https://github.com/videolabs/libspatialaudio.git
+cd libspatialaudio
+```
 
-    ```bash
-    git clone https://github.com/videolabs/libspatialaudio.git
-    cd libspatialaudio
-    ```
+To build **libspatialaudio**, either Meson or CMake can be used:
 
-2. Create a `build` directory and navigate into it:
+### Meson
 
-    ```bash
-    mkdir build
-    cd build
-    ```
+1. Create a `build` directory and configure the project:
 
-3. Run CMake to configure the project:
+   ```bash
+   meson setup build
+   ```
 
-    ```bash
-    cmake ..
-    ```
+2. Build the project:
 
-4. Build the project using Make:
+   ```bash
+   meson compile -C build
+   ```
 
-    ```bash
-    make
-    ```
+### CMake
+
+1. Create a `build` directory and configure the project:
+
+   ```bash
+   cmake -B build
+   ```
+
+2. Build the project:
+
+   ```bash
+   cmake --build build
+   ```
 
 ## License
 
