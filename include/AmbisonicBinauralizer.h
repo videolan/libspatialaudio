@@ -39,10 +39,17 @@ namespace spaudio {
     public:
         AmbisonicBinauralizer();
 
-        /** Re-create the object for the given configuration. Previous data is
-         *  lost. The tailLength variable it updated with the number of taps
-         *  used for the processing, and this can be used to offset the delay
-         *  this causes. The function returns true if the call is successful.
+        /**
+         * Configure the ambisonic binauralizer
+         *
+         * Re-create the object for the given configuration. Previous data is
+         * lost. The tailLength variable it updated with the number of taps
+         * used for the processing, and this can be used to offset the delay
+         * this causes. The function returns true if the call is successful.
+         *
+         * @important
+         * When libspatialaudios internal MIT HRTF is used instead of SOFA, binauralization
+         * will only work for 1st order ambisonic, not for higher order ambisonics.
          *
          * @param nOrder        The order of the signal to be processed.
          * @param b3D           Set to true if the signal to be processed is 3D. Must be true.

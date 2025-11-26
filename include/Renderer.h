@@ -53,7 +53,11 @@ namespace spaudio {
         Renderer();
         ~Renderer();
 
-        /** Configure the ADM Renderer.
+        /** Configure the Renderer.
+         *
+         * @important
+         * When libspatialaudios internal MIT HRTF is used instead of SOFA, binauralization
+         * will only work for 1st order ambisonic, not for higher order ambisonics.
          *
          * @param outputTarget			The target output layout.
          * @param hoaOrder				The ambisonic order of the signal to be rendered.

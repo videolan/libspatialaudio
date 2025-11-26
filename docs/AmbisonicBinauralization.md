@@ -76,6 +76,10 @@ The configuration parameters are:
 - **HRTFPath**: An optional path to the .SOFA file containing the HRTF. If no path is supplied and the `HAVE_MIT_HRTF` compiler flag is used then the MIT HRTF will be used.
 - **lowCpuMode**: (Optional) If this is set to true (its default value) then the symmetric head assumption is used to reduce CPU used [[4]](#ref4).
 
+> [!IMPORTANT]
+> When libspatialaudios internal MIT HRTF is used instead of SOFA, binauralization
+> will only work for 1st order ambisonic, not for HOA like 2nd or 3rd order.
+
 ### Decoding a Signal
 
 A B-format signal can be decoded to the binaural signals using the `Process()` function. The processing is non-replacing, so the original B-format signal is unchanged and the decoded signal is contained in the output array.

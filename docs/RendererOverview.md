@@ -70,6 +70,11 @@ The configuration parameters are:
 - **reproductionScreen**: (Optional) Reproduction screen details used for screen scaling/locking.
 - **layoutPositions**: (Optional) Real polar positions for each of the loudspeaker in the layout. This is used if they do not exactly match the ITU specification. Note that they must be within the range allowed by the specification.
 
+> [!IMPORTANT]
+> When the renderer is configured for binaural output and the internal MIT HRTF
+> is used instead of SOFA, the binauralization will only work for 1st order ambisonics,
+> not for higher order ambisonics.
+
 ### AddObject
 
 `AddObject()` should be called for every Object stream to be rendered. Its corresponding `ObjectMetadata` should be supplied with it.
