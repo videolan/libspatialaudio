@@ -1,5 +1,38 @@
 ## Changes in 0.4.0
 
+This release is a huge evolution for libspatialaudio from its origin as a Higher Order Ambisonics library.
+
+This new release expands functionality to include object-based audio, additional loudspeaker layout support,
+binauralizations and many more new features that makes this library ready for rendering all type of spatial audio.
+
+This is all unified in a Renderer class for Ambisonics, object-based audio, speaker layouts and binauralization.
+This makes it a much more comprehensive and easier to use library for immersive audio.
+The Renderer is designed to adapt easily to ADM and IAMF next‑generation audio workflows.
+
+### Main Updates:
+
+Object-Based Audio: Position and render individual sources dynamically
+in 3D space, compatible with ITU ADM and AOM’s IAMF immersive audio
+standards.
+
+Unified Renderer Class: Seamlessly process HOA, object signals, speaker
+feeds, and binaural output under one API.
+
+Cross-Platform Builds: Modernized build system with Meson and CMake,
+ensuring reproducibility across different operating systems.
+
+Robust Documentation: Expanded theory, DSP background, and code examples
+for both newcomers and advanced developers.
+
+Real-time Improvements: The code is now more efficient and real-time
+safe, making it suitable for AR/AR and gaming applications.
+
+Higher Order Ambisonics (HOA): Efficiency and real-time improvements, as
+well as now supporting decoding to ITU standard loudspeaker layouts
+(5.1, 7.1.4, etc.)
+
+### API changes
+
 - This is an API and ABI breaking release.
 - Move Classes to the `spaudio` namespace.
 - Simplified class names:
