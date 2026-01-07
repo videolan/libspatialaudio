@@ -193,8 +193,6 @@ install(TARGETS spatialaudio
 )
 install(FILES "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}.pc"
     DESTINATION ${CMAKE_INSTALL_LIBDIR}/pkgconfig)
-install(FILES ${PROJECT_BINARY_DIR}/config.h
-    DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/spatialaudio)
 
 enable_testing()
 add_subdirectory(tests)
