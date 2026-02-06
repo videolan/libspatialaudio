@@ -1,3 +1,9 @@
+conf_data.set('CMAKE_PROJECT_VERSION', meson.project_version())
+split_version = meson.project_version().split('.')
+conf_data.set('CMAKE_PROJECT_VERSION_MAJOR', split_version[0])
+conf_data.set('CMAKE_PROJECT_VERSION_MINOR', split_version[1])
+conf_data.set('CMAKE_PROJECT_VERSION_PATCH', split_version[2])
+
 config_h = configure_file(
     input : 'SpatialaudioConfig.h.in',
     output : 'SpatialaudioConfig.h',
