@@ -1,6 +1,13 @@
 cmake_minimum_required(VERSION 3.23)
 
-project(spatialaudio VERSION 0.4.0)
+# Get the version from the meson file
+file(READ ${CMAKE_CURRENT_SOURCE_DIR}/meson.build CONTENT)
+string(REGEX MATCH "    version : '([0-9]+).([0-9]+).([0-9]+)'" VERSION_REGEX "${CONTENT}")
+set(MESON_RELEASE_VERSION_MAJOR ${CMAKE_MATCH_1})
+set(MESON_RELEASE_VERSION_MINOR ${CMAKE_MATCH_2})
+set(MESON_RELEASE_VERSION_PATCH ${CMAKE_MATCH_3})
+
+project(spatialaudio VERSION ${MESON_RELEASE_VERSION_MAJOR}.${MESON_RELEASE_VERSION_MINOR}.${MESON_RELEASE_VERSION_PATCH})
 
 # Options
 option(BUILD_SHARED_LIBS "Build shared instead of static libraries" ON)
