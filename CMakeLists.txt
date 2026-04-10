@@ -12,6 +12,7 @@ project(spatialaudio VERSION ${MESON_RELEASE_VERSION_MAJOR}.${MESON_RELEASE_VERS
 # Options
 option(BUILD_SHARED_LIBS "Build shared instead of static libraries" ON)
 option(HAVE_MIT_HRTF "Should MIT HRTF be built-in" ON)
+option(BUILD_TESTING "Build tests" OFF)
 
 include(GNUInstallDirs)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
@@ -201,8 +202,10 @@ install(TARGETS spatialaudio
 install(FILES "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}.pc"
     DESTINATION ${CMAKE_INSTALL_LIBDIR}/pkgconfig)
 
-enable_testing()
-add_subdirectory(tests)
+if(BUILD_TESTING)
+    enable_testing()
+    add_subdirectory(tests)
+endif(BUILD_TESTING)
 
 # Tarballs generation
 set(CPACK_PACKAGE_VERSION_MAJOR ${PROJECT_VERSION_MAJOR})
