@@ -33,6 +33,7 @@ libspatialaudio_dep = declare_dependency(
     include_directories : spatialaudio_incdirs,
     dependencies : dependencies,
     link_with : spatialaudio_lib,
+    compile_args : ['-D_USE_MATH_DEFINES'],
 )
 meson.override_dependency('libspatialaudio', libspatialaudio_dep)
 

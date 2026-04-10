@@ -39,7 +39,7 @@ spatialaudio_sources = files(
     'ObjectPanner.cpp',
 )
 
-spatialaudio_clike_args = ['-DSPATIALAUDIO_COMPILATION']
+spatialaudio_clike_args = ['-DSPATIALAUDIO_COMPILATION', '-D_USE_MATH_DEFINES']
 
 # Extract version info from header
 spatialaudio_api_version = cpp.get_define('SPATIALAUDIO_API_VERSION_STRING',
