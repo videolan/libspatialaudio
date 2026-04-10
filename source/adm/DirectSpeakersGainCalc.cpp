@@ -13,7 +13,7 @@
 /*############################################################################*/
 
 #include "adm/DirectSpeakersGainCalc.h"
-#include<string>
+#include <string>
 #include <map>
 
 namespace spaudio {
