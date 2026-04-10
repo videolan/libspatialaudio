@@ -364,7 +364,7 @@ namespace spaudio {
             {
                 upperLayerSet.push_back(iSpk);
                 // TODO: consider remapping azimuth to range -180 to 180
-                maxUpperAz = std::max(maxUpperAz, abs(layout.getChannel(iSpk).getPolarPositionNominal().azimuth));
+                maxUpperAz = std::max(maxUpperAz, std::abs(layout.getChannel(iSpk).getPolarPositionNominal().azimuth));
                 meanUpperEl += layout.getChannel(iSpk).getPolarPosition().elevation;
             }
             else if (el >= -10 && el <= 10)
@@ -376,7 +376,7 @@ namespace spaudio {
             {
                 lowerLayerSet.push_back(iSpk);
                 // TODO: consider remapping azimuth to range -180 to 180
-                maxLowerAz = std::max(maxLowerAz, abs(layout.getChannel(iSpk).getPolarPositionNominal().azimuth));
+                maxLowerAz = std::max(maxLowerAz, std::abs(layout.getChannel(iSpk).getPolarPositionNominal().azimuth));
                 meanLowerEl += layout.getChannel(iSpk).getPolarPosition().elevation;
             }
         }
@@ -390,7 +390,7 @@ namespace spaudio {
             auto name = layout.getChannel(midLayerSet[iMid]).getChannelName();
             double azimuth = layout.getChannel(midLayerSet[iMid]).getPolarPosition().azimuth;
             // Lower layer
-            if ((lowerLayerSet.size() > 0 && abs(azimuth) > maxLowerAz + 40.) || lowerLayerSet.size() == 0)
+            if ((lowerLayerSet.size() > 0 && std::abs(azimuth) > maxLowerAz + 40.) || lowerLayerSet.size() == 0)
             {
                 m_downmixMapping.push_back(iMid);
                 name.at(0) = 'B';
@@ -406,7 +406,7 @@ namespace spaudio {
             auto name = layout.getChannel(midLayerSet[iMid]).getChannelName();
             double azimuth = layout.getChannel(midLayerSet[iMid]).getPolarPosition().azimuth;
             // Upper layer
-            if ((upperLayerSet.size() > 0 && abs(azimuth) > maxUpperAz + 40.) || upperLayerSet.size() == 0)
+            if ((upperLayerSet.size() > 0 && std::abs(azimuth) > maxUpperAz + 40.) || upperLayerSet.size() == 0)
             {
                 m_downmixMapping.push_back(iMid);
                 name.at(0) = 'U';
