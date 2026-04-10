@@ -174,6 +174,8 @@ target_include_directories(spatialaudio
 target_compile_definitions(spatialaudio
     PRIVATE
         SPATIALAUDIO_COMPILATION
+    PUBLIC
+        _USE_MATH_DEFINES
 )
 
 if(MYSOFA_FOUND)
