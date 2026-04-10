@@ -13,8 +13,8 @@
 /*############################################################################*/
 
 #include "Renderer.h"
-#include<type_traits>
-#include<iostream>
+#include <type_traits>
+#include <iostream>
 
 namespace spaudio {
 

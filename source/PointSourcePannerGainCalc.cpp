@@ -16,8 +16,8 @@
 
 #include "LoudspeakerLayoutHulls.h"
 
-#include<cmath>
-#include<string>
+#include <cmath>
+#include <string>
 #include <map>
 
 namespace spaudio {
