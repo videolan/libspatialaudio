@@ -19,10 +19,7 @@ namespace spaudio {
 
         hrtf = mysofa_open(path.c_str(), i_sampleRate, &i_internalLength, &err);
         if (hrtf == nullptr)
-        {
-            std::cout << "Could not load the SOFA HRTF." << std::endl;
-            return;
-        }
+            throw std::runtime_error("Could not load the SOFA HRTF");
 
         i_filterExtraLength = i_internalLength / 2;
         i_len = i_internalLength + i_filterExtraLength;
