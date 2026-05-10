@@ -187,6 +187,13 @@ if(MYSOFA_FOUND)
     target_link_libraries(spatialaudio ${MYSOFA_LIBRARIES})
 endif(MYSOFA_FOUND)
 
+if(MSVC)
+    set(Z_LIB "-lzlib")
+else()
+    set(Z_LIB "-lz")
+    set(MATH_LIB "-lm")
+endif(MSVC)
+
 configure_file(
     "${CMAKE_CURRENT_SOURCE_DIR}/cmake/spatialaudio.pc.cmake"
     "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}.pc"
