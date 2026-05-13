@@ -27,7 +27,7 @@ namespace spaudio {
      *  This class is deprecated in favour of AmbisonicOptimFilters, which uses LinkwitzRiley IIR filters to apply frequency dependent gains.
      */
     class
-        SPAUDIO_DEPRECATED("This class is deprecated. Please use AmbisonicOptimFilters class instead.")
+        SPAUDIO_DEPRECATED("Please use AmbisonicOptimFilters class instead.")
         SPAUDIO_API
     AmbisonicShelfFilters : public AmbisonicBase
     {
