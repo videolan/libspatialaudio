@@ -35,4 +35,14 @@
 # define SPAUDIO_API SPATIALAUDIO_IMPORT
 #endif
 
+// Deprecation annotation
+// For GCC 12 and older we must not mix the attribute syntax
+// styles, so in that case, we use __attribute__(()) here, else
+// we just use the normal C++ attribute syntax
+#if defined(__GNUC__) && (__GNUC__ < 13)
+# define SPAUDIO_DEPRECATED(msg) __attribute__((deprecated(msg)))
+#else
+# define SPAUDIO_DEPRECATED(msg) [[deprecated(msg)]]
+#endif
+
 #endif /* SPATIALAUDIO_API_H */
