@@ -1,3 +1,20 @@
+## Changes in 0.4.1
+
+This is a minor release fixing some build issues and API correctness:
+
+- Properly handle mysofa initialization failures by throwing an exception.
+- Handle exceptions when initializing HRTF objects, so `Configure` on
+  objects that use HRTF internally will correctly return `false` instead
+  of throwing.
+- Fix PkgConfig file generated on Windows when using MSVC.
+- Fix build with older GCC versions by changing deprecation annotations
+- Define `_USE_MATH_DEFINES` globally, if needed. Note that this will
+  change in a future version, so do not rely on this behavior.
+- Add an option (`BUILD_TESTING`) and default to not build any tests.
+- Add libspatialaudio version defines to `SpatialaudioConfig.h`, these
+  contain the library version. For the API version use the defines in
+  `SpatialaudioVersion.h`.
+
 ## Changes in 0.4.0
 
 This release is a huge evolution for libspatialaudio from its origin as a Higher Order Ambisonics library.
