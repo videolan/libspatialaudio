@@ -387,24 +387,25 @@ namespace spaudio {
     {
         HRTF* p_hrtf;
 
+        try {
 #if SPATIALAUDIO_SUPPORTS_SOFA
 # if SPATIALAUDIO_SUPPORTS_MIT_HRTF
-        if (HRTFPath == "")
-            p_hrtf = new MIT_HRTF(nSampleRate);
-        else
+            if (HRTFPath == "")
+                p_hrtf = new MIT_HRTF(nSampleRate);
+            else
 # endif
-            p_hrtf = new SOFA_HRTF(HRTFPath, nSampleRate);
+                p_hrtf = new SOFA_HRTF(HRTFPath, nSampleRate);
 #else
 # if SPATIALAUDIO_SUPPORTS_MIT_HRTF
-        p_hrtf = new MIT_HRTF(nSampleRate);
-        (void)HRTFPath;
+            p_hrtf = new MIT_HRTF(nSampleRate);
+            (void)HRTFPath;
 # else
 # error At least MySOFA or MIT_HRTF need to be enabled
 # endif
 #endif
-
-        if (p_hrtf == nullptr)
+        } catch (...) {
             return nullptr;
+        }
 
         if (!p_hrtf->isLoaded())
         {
